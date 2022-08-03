@@ -1,0 +1,14 @@
+body{
+    min-height: 100vh;
+}
+.sidebar-container{
+
+    max-width: 250px;
+    position: relative;
+}
+.sidebar{
+    position: fixed;
+    background-color: #333a3d;
+    height: 100vh;
+    max-width: 250px;
+}
