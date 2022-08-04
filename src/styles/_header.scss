@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../images/header.png");
+    width: 100%;
+    min-height: 14rem;
+    box-shadow: 0px 4px 5px 0px rgba(34, 60, 80, 0.4);
+  }
