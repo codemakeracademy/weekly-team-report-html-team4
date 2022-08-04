@@ -21,7 +21,7 @@ const config = {
       template: "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: "invite_your_team.html",
+      template: "./invite_your_team.html",
       filename: "invite_your_team.html"
     }),
 

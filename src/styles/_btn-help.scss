@@ -1,0 +1,23 @@
+.btn-help {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    width: 6rem;
+    height: 2.7rem;
+    border-radius: 1.5rem;
+    border: 0;
+    background-color: #FFC107;
+    font-weight: bold;
+    color: #1E1E1E;
+  }
+
+  .btn-feedback{
+    position: fixed;
+    top: 25rem;
+    left: calc(100% - 55px);
+    transform: rotate(-90deg);
+    width: 5rem;
+    background-color: #062844;
+    font-weight: 300;
+    color: #FFFFFF;
+  }
