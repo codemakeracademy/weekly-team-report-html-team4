@@ -1,0 +1,16 @@
+.header{
+    background-color: #333333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px 30px;
+    .logo{
+        height: 15vh;
+        min-height: 100px;
+        width: auto;
+    }
+    h2{
+        font-weight: 500;
+    }
+}
