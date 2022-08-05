@@ -1,4 +1,4 @@
-
+@import './variables';
 
 .nav-pills{
     .nav-link{
@@ -14,7 +14,7 @@
     }
     
     .nav-link.active{
-        font-weight: bold;
+        font-weight: $nav-pills-link-active-font-weight;
         &:hover{
             color: $yellow;
         }
