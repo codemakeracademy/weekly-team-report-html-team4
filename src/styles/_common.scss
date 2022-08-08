@@ -1,21 +1,28 @@
-body{
+@import "./variables";
+
+body {
     min-height: 100vh;
 }
-.sidebar-container{
+.sidebar-container {
     max-width: 250px;
     position: relative;
 }
-.sidebar{
+.sidebar {
     position: fixed;
     background-color: #333a3d;
     height: 100vh;
     max-width: 250px;
 }
-.avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 75%;
-    background-color: rgb(216, 216, 216);
-    border: 2px solid white;
-    color: #000;
-} 
+
+.bg-brush {
+    background-image: url("../images/big-title-brush-background.png");
+    background-repeat: no-repeat;
+    width: max-content;
+    background-size: cover;
+}
+
+.btn-disabled{
+    background-color: $gray-300!important;
+    border: $gray-300!important;
+    color: $gray-600!important;
+}
