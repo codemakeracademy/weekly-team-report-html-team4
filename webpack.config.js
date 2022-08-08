@@ -25,6 +25,10 @@ const config = {
       filename: "invite_your_team.html"
     }),
     new HtmlWebpackPlugin({
+      template: "invite_your_team_success.html",
+      filename: "invite_your_team_success.html"
+    }),
+    new HtmlWebpackPlugin({
       template: "fill_out_a_report.html",
       filename: "fill_out_a_report.html"
     }),
