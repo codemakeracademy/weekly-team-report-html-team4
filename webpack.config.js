@@ -28,6 +28,10 @@ const config = {
       template: "my_company.html",
       filename: "my_company.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "edit_profile.html",
+      filename: "edit_profile.html"
+    }),
     
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
