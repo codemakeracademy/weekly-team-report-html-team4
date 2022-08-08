@@ -37,8 +37,8 @@ const config = {
       filename: "my_company.html"
     }),
     new HtmlWebpackPlugin({
-      template: "edit_profile.html",
-      filename: "edit_profile.html"
+      template: "my_reports.html",
+      filename: "my_reports.html"
     }),
     
     // Add your plugins here

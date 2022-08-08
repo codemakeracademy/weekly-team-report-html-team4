@@ -4,11 +4,23 @@
 
 $bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts";
 
-$yellow:#f0c815;
-$dark:#1f2426;
+$yellow: #f0c815;
+$dark: #1f2426;
+$gray: #333a3d;
+$gray-light: #b6bec2;
 
+$very-sad: #d64239;
+$sad: #f58331;
+$neutral: #ffc95e;
+$happy: #48ce65;
+$very-happy: #26a446;
+$bg-faces-opacity: 30%;
 
 $nav-pills-link-active-font-weight: bold;
+
+$btn-dark-font-weight: bold;
+
+$accordion-button-font-size: 1.5rem;
 
 // // Variables
 // //
@@ -311,7 +323,7 @@ $nav-pills-link-active-font-weight: bold;
 
 // // scss-docs-start theme-color-variables
 // $primary:       $blue !default;
-// $secondary:     $gray-600 !default;
+$secondary: $gray;
 // $success:       $green !default;
 // $info:          $cyan !default;
 // $warning:       $yellow !default;
@@ -773,8 +785,8 @@ $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
 // $btn-font-weight:             $font-weight-normal !default;
 // $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 // $btn-focus-width:             $input-btn-focus-width !default;
-// $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity:        .5;
+$btn-focus-box-shadow: $input-btn-focus-box-shadow;
+$btn-disabled-opacity: 0.5;
 // $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 
 // $btn-link-color:              var(--#{$prefix}link-color) !default;
@@ -1281,20 +1293,20 @@ $nav-pills-link-active-bg: $dark;
 // $accordion-button-color:                  $accordion-color !default;
 // $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 // $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-// $accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
-// $accordion-button-active-color:           shade-color($primary, 10%) !default;
+$accordion-button-active-bg: $gray;
+$accordion-button-active-color: $yellow;
 
-// $accordion-button-focus-border-color:     $input-focus-border-color !default;
-// $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
+$accordion-button-focus-border-color: $input-focus-border-color;
+$accordion-button-focus-box-shadow: $btn-focus-box-shadow;
 
 // $accordion-icon-width:                    1.25rem !default;
-// $accordion-icon-color:                    $accordion-button-color !default;
-// $accordion-icon-active-color:             $accordion-button-active-color !default;
+// $accordion-icon-color:                    $accordion-button-color;
+$accordion-icon-active-color: $gray-light;
 // $accordion-icon-transition:               transform .2s ease-in-out !default;
 // $accordion-icon-transform:                rotate(-180deg) !default;
 
-// $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
-// $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$accordion-button-active-bg}' class='bi bi-caret-down-fill' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$accordion-icon-active-color}' class='bi bi-caret-down-fill' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
 // // scss-docs-end accordion-variables
 
 // // Tooltips
