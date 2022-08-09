@@ -73,9 +73,6 @@ body {
 
 .accordion-button {
     font-size: $accordion-button-font-size !important;
-    &::after {
-        content: "" !important;
-    }
 }
 
 .text-light-gray {
