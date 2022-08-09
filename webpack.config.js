@@ -40,6 +40,14 @@ const config = {
       template: "my_reports.html",
       filename: "my_reports.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "team_reports.html",
+      filename: "team_reports.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "extended_team_reports.html",
+      filename: "extended_team_reports.html"
+    }),
     
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
