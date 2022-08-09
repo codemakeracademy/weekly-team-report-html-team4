@@ -1,21 +1,21 @@
 @import './variables';
 
-.nav-pills{
-    .nav-link{
+.nav-pills {
+    .nav-link {
         text-align: start;
-        &:hover{
+        &:hover {
             color: $yellow;
         }
-        a{
-            &:visited{
+        a {
+            &:visited {
                 color: white;
             }
         }
     }
-    
-    .nav-link.active{
+
+    .nav-link.active {
         font-weight: $nav-pills-link-active-font-weight;
-        &:hover{
+        &:hover {
             color: $yellow;
         }
     }

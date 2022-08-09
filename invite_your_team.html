@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Invite Your Team</title>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <title>Invite Your Team</title>
-</head>
-
-<body class="h-100 d-flex">
-    <%=require('html-loader!./src/components/sidebar.html').default%>
+    <body class="h-100 d-flex">
+        <%=require('html-loader!./src/components/sidebar.html').default%>
         <div class="w-100">
             <div class="header">
                 <header class="text-center text-light">
                     <h1 class="display-5 fw-bold">Invite Your Team</h1>
                 </header>
             </div>
-            <form class="container-fluid mt-3 p-2" style="width: 50rem;">
+            <form class="container-fluid mt-3 p-2" style="width: 50rem">
                 <div class="card-body card shadow-sm">
                     <div class="pb-2">
-                        <strong>Enter the team member you would like to invite.</strong>
+                        <strong
+                            >Enter the team member you would like to
+                            invite.</strong
+                        >
                     </div>
                     <div class="pb-2">
-                        Don't worry! You'll be able to add more team members later.
+                        Don't worry! You'll be able to add more team members
+                        later.
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputFirstName1" class="form-label"><strong>First
-                                Name</strong></label>
-                        <input type="text" class="form-control" aria-label="First name">
+                        <label for="exampleInputFirstName1" class="form-label"
+                            ><strong>First Name</strong></label
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            aria-label="First name"
+                        />
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputLastName1" class="form-label"><strong>Last
-                                Name</strong></label>
-                        <input type="text" class="form-control" aria-label="Last name">
+                        <label for="exampleInputLastName1" class="form-label"
+                            ><strong>Last Name</strong></label
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            aria-label="Last name"
+                        />
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"><strong>Email</strong></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1" class="form-label"
+                            ><strong>Email</strong></label
+                        >
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                        />
                     </div>
                     <div>
-                        <a class="btn btn-warning" href="invite_your_team_success.html"
-                            role="button"><strong>Invite</strong></a>
+                        <a
+                            class="btn btn-warning"
+                            href="invite_your_team_success.html"
+                            role="button"
+                            ><strong>Invite</strong></a
+                        >
                     </div>
                 </div>
             </form>
             <%=require('html-loader!./src/components/fixed_btns.html').default%>
         </div>
-
+    </body>
 </html>
