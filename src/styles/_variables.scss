@@ -430,10 +430,10 @@ $body-bg: #f5f7f8;
 // //
 // // Style anchor elements.
 
-// $link-color:                              $primary !default;
+$link-color:                              $gray-light;
 // $link-decoration:                         underline !default;
 // $link-shade-percentage:                   20% !default;
-// $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-color:                        $yellow;
 // $link-hover-decoration:                   null !default;
 
 // $stretched-link-pseudo-element:           after !default;
@@ -745,7 +745,7 @@ $input-btn-focus-color: rgba(
     $component-active-bg,
     $input-btn-focus-color-opacity
 );
-// $input-btn-focus-blur:          0 !default;
+$input-btn-focus-blur:          0 ;
 $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
     $input-btn-focus-color;
 
@@ -1214,25 +1214,25 @@ $nav-pills-link-active-bg: $dark;
 
 // $pagination-font-size:              $font-size-base !default;
 
-// $pagination-color:                  var(--#{$prefix}link-color) !default;
-// $pagination-bg:                     $white !default;
+$pagination-color:                  var(--#{$prefix}link-color);
+$pagination-bg:                     $dark ;
 // $pagination-border-radius:          $border-radius !default;
-// $pagination-border-width:           $border-width !default;
-// $pagination-margin-start:           ($pagination-border-width * -1) !default;
-// $pagination-border-color:           $gray-300 !default;
+$pagination-border-width:           2px;
+$pagination-margin-start:           ($pagination-border-width * -1);
+$pagination-border-color:           $dark ;
 
-// $pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
-// $pagination-focus-bg:               $gray-200 !default;
+$pagination-focus-color:            $yellow;
+$pagination-focus-bg:               $dark;
 // $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 // $pagination-focus-outline:          0 !default;
 
-// $pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
-// $pagination-hover-bg:               $gray-200 !default;
-// $pagination-hover-border-color:     $gray-300 !default;
+$pagination-hover-color:            var(--#{$prefix}link-hover-color) ;
+$pagination-hover-bg:               $dark;
+$pagination-hover-border-color:     $yellow;
 
-// $pagination-active-color:           $component-active-color !default;
-// $pagination-active-bg:              $component-active-bg !default;
-// $pagination-active-border-color:    $pagination-active-bg !default;
+$pagination-active-color:           $white;
+$pagination-active-bg:              $dark;
+$pagination-active-border-color:    $yellow ;
 
 // $pagination-disabled-color:         $gray-600 !default;
 // $pagination-disabled-bg:            $white !default;
