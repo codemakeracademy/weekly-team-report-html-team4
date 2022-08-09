@@ -1,481 +1,456 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Team Reports - Alpha</title>
-    </head>
-    <body class="h-100 d-flex">
-        <%=require('html-loader!./src/components/sidebar.html').default%>
-        <div class="content w-100 d-flex flex-column">
-            <div class="header justify-content-between">
-                <nav aria-label="Team reports navigation">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="team_reports.html"
-                                >Immediate Team</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a
-                                class="page-link active"
-                                href="extended_team_reports.html"
-                                >Extended Team</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
+  <head>
+    <meta charset="utf-8" />
+    <title>Team Reports - Alpha</title>
+  </head>
+  <body class="h-100 d-flex">
+    <%=require('html-loader!./src/components/sidebar.html').default%>
+    <div class="content w-100 d-flex flex-column">
+      <div class="header justify-content-between">
+        <nav aria-label="Team reports navigation">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="team_reports.html">Immediate Team</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link active" href="extended_team_reports.html"
+                >Extended Team</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-                <h2>Weekly Report History</h2>
+        <h2>Weekly Report History</h2>
 
-                <div class="fs-4">
-                    Get a bigger picture of how your team has been doing over
-                    time.
-                </div>
-            </div>
-            <div class="container py-5">
-                <nav aria-label="Period reports navigation " class="pb-5">
-                    <ul class="pagination d-flex justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link" href="?period=prev"
-                                >Previous Period: 5/16 - 5/22</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="?period=current"
-                                >Current Period: 5/23 - 5/29</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link active" href="?period=older"
-                                >Older Reports</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-                <nav aria-label="Type reports navigation " class="pb-5">
-                    <ul class="pagination d-flex justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link active" href="?type=overall"
-                                >Overall</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="?type=morale">Morale</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="?type=stress">Stress</a>
-                        </li>
-
-                        <li class="page-item">
-                            <a class="page-link" href="?type=workload"
-                                >Workload</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-                <h5 class="w-100 text-center text-uppercase fw-bold mt-5">
-                    Extended Team Average
-                </h5>
-                <div class="w-100 d-flex justify-content-center mt-3 mb-5">
-                    <div class="underline"></div>
-                </div>
-                <div class="row w-100 mx-auto my-2">
-                    <div class="col-3"></div>
-                    <div class="col-9 row">
-                        <div class="col text-center">9w ago</div>
-                        <div class="col text-center">8w ago</div>
-                        <div class="col text-center">7w ago</div>
-                        <div class="col text-center">6w ago</div>
-                        <div class="col text-center">5w ago</div>
-                        <div class="col text-center">4w ago</div>
-                        <div class="col text-center">3w ago</div>
-                        <div class="col text-center">2w ago</div>
-                        <div class="col text-center">1w ago</div>
-                        <div class="col text-center">Current</div>
-                    </div>
-                </div>
-                <div class="accordion shadow-sm mb-2" id="accordion1">
-                    <div class="accordion-item">
-                        <h2
-                            class="accordion-header position-relative"
-                            id="heading1"
-                        >
-                            <button
-                                class="w-100 accordion-button accordion-icon-hidden row px-0 mx-0 collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapse1"
-                            >
-                                <div class="col-3 px-4 fw-bold">Overall</div>
-                                <div class="col-9 row">
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/very-happy.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                </div>
-                            </button>
-                        </h2>
-                    </div>
-                </div>
-
-                <h5 class="w-100 text-center text-uppercase fw-bold mt-5">
-                    Extended Team
-                </h5>
-                <div class="w-100 d-flex justify-content-center mt-3 mb-5">
-                    <div class="underline"></div>
-                </div>
-                <div class="row w-100 mx-auto my-2">
-                    <div class="col-3"></div>
-                    <div class="col-9 row">
-                        <div class="col text-center">9w ago</div>
-                        <div class="col text-center">8w ago</div>
-                        <div class="col text-center">7w ago</div>
-                        <div class="col text-center">6w ago</div>
-                        <div class="col text-center">5w ago</div>
-                        <div class="col text-center">4w ago</div>
-                        <div class="col text-center">3w ago</div>
-                        <div class="col text-center">2w ago</div>
-                        <div class="col text-center">1w ago</div>
-                        <div class="col text-center">Current</div>
-                    </div>
-                </div>
-                <div class="accordion shadow-sm mb-2" id="accordion1">
-                    <div class="accordion-item">
-                        <h2
-                            class="accordion-header position-relative"
-                            id="heading1"
-                        >
-                            <button
-                                class="w-100 accordion-button accordion-icon-hidden row px-0 mx-0 collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapse1"
-                            >
-                                <div class="col-3 px-4">Aleksey Rudenko</div>
-                                <div class="col-9 row">
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/very-happy.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                </div>
-                            </button>
-                        </h2>
-                    </div>
-                </div>
-                <div class="accordion shadow-sm mb-2" id="accordion1">
-                    <div class="accordion-item">
-                        <h2
-                            class="accordion-header position-relative"
-                            id="heading1"
-                        >
-                            <button
-                                class="w-100 accordion-button accordion-icon-hidden row px-0 mx-0 collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapse1"
-                            >
-                                <div class="col-3 px-4">Valeriia Stavriadi</div>
-                                <div class="col-9 row">
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/very-happy.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                </div>
-                            </button>
-                        </h2>
-                    </div>
-                </div>
-                <div class="accordion shadow-sm mb-2" id="accordion1">
-                    <div class="accordion-item">
-                        <h2
-                            class="accordion-header position-relative"
-                            id="heading1"
-                        >
-                            <button
-                                class="w-100 accordion-button accordion-icon-hidden row px-0 mx-0 collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapse1"
-                            >
-                                <div class="col-3 px-4">
-                                    Aleksei Levshinskii
-                                </div>
-                                <div class="col-9 row">
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/without-face.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="col text-center">
-                                        <img
-                                            class="w-100 h-auto"
-                                            src="<%=require('./src/images/very-happy.svg')%>"
-                                            alt=""
-                                        />
-                                    </div>
-                                </div>
-                            </button>
-                        </h2>
-                    </div>
-                </div>
-            </div>
+        <div class="fs-4">
+          Get a bigger picture of how your team has been doing over time.
         </div>
-        <%=require('html-loader!./src/components/fixed_btns.html').default%>
-    </body>
+      </div>
+      <div class="container py-5">
+        <nav aria-label="Period reports navigation " class="pb-5">
+          <ul class="pagination d-flex justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="?period=prev"
+                >Previous Period: 5/16 - 5/22</a
+              >
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="?period=current"
+                >Current Period: 5/23 - 5/29</a
+              >
+            </li>
+            <li class="page-item">
+              <a class="page-link active" href="?period=older">Older Reports</a>
+            </li>
+          </ul>
+        </nav>
+        <nav aria-label="Type reports navigation " class="pb-5">
+          <ul class="pagination d-flex justify-content-center">
+            <li class="page-item">
+              <a class="page-link active" href="?type=overall">Overall</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="?type=morale">Morale</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="?type=stress">Stress</a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="?type=workload">Workload</a>
+            </li>
+          </ul>
+        </nav>
+        <h5 class="w-100 text-center text-uppercase fw-bold mt-5">
+          Extended Team Average
+        </h5>
+        <div class="w-100 d-flex justify-content-center mt-3 mb-5">
+          <div class="underline"></div>
+        </div>
+        <div class="row w-100 mx-auto my-2">
+          <div class="col-3"></div>
+          <div class="col-9 row">
+            <div class="col text-center">9w ago</div>
+            <div class="col text-center">8w ago</div>
+            <div class="col text-center">7w ago</div>
+            <div class="col text-center">6w ago</div>
+            <div class="col text-center">5w ago</div>
+            <div class="col text-center">4w ago</div>
+            <div class="col text-center">3w ago</div>
+            <div class="col text-center">2w ago</div>
+            <div class="col text-center">1w ago</div>
+            <div class="col text-center">Current</div>
+          </div>
+        </div>
+        <div class="accordion shadow-sm mb-2" id="accordion1">
+          <div class="accordion-item">
+            <h2 class="accordion-header position-relative" id="heading1">
+              <button
+                class="w-100 accordion-button accordion-icon-hidden row px-0 mx-0 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                <div class="col-3 px-4 fw-bold">Overall</div>
+                <div class="col-9 row">
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/very-happy.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </button>
+            </h2>
+          </div>
+        </div>
+
+        <h5 class="w-100 text-center text-uppercase fw-bold mt-5">
+          Extended Team
+        </h5>
+        <div class="w-100 d-flex justify-content-center mt-3 mb-5">
+          <div class="underline"></div>
+        </div>
+        <div class="row w-100 mx-auto my-2">
+          <div class="col-3"></div>
+          <div class="col-9 row">
+            <div class="col text-center">9w ago</div>
+            <div class="col text-center">8w ago</div>
+            <div class="col text-center">7w ago</div>
+            <div class="col text-center">6w ago</div>
+            <div class="col text-center">5w ago</div>
+            <div class="col text-center">4w ago</div>
+            <div class="col text-center">3w ago</div>
+            <div class="col text-center">2w ago</div>
+            <div class="col text-center">1w ago</div>
+            <div class="col text-center">Current</div>
+          </div>
+        </div>
+        <div class="accordion shadow-sm mb-2" id="accordion1">
+          <div class="accordion-item">
+            <h2 class="accordion-header position-relative" id="heading1">
+              <button
+                class="w-100 accordion-button accordion-icon-hidden row px-0 mx-0 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                <div class="col-3 px-4">Aleksey Rudenko</div>
+                <div class="col-9 row">
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/very-happy.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </button>
+            </h2>
+          </div>
+        </div>
+        <div class="accordion shadow-sm mb-2" id="accordion1">
+          <div class="accordion-item">
+            <h2 class="accordion-header position-relative" id="heading1">
+              <button
+                class="w-100 accordion-button accordion-icon-hidden row px-0 mx-0 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                <div class="col-3 px-4">Valeriia Stavriadi</div>
+                <div class="col-9 row">
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/very-happy.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </button>
+            </h2>
+          </div>
+        </div>
+        <div class="accordion shadow-sm mb-2" id="accordion1">
+          <div class="accordion-item">
+            <h2 class="accordion-header position-relative" id="heading1">
+              <button
+                class="w-100 accordion-button accordion-icon-hidden row px-0 mx-0 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                <div class="col-3 px-4">Aleksei Levshinskii</div>
+                <div class="col-9 row">
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/without-face.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      class="w-100 h-auto"
+                      src="<%=require('./src/images/very-happy.svg')%>"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </button>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%=require('html-loader!./src/components/fixed_btns.html').default%>
+  </body>
 </html>

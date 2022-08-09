@@ -1,263 +1,225 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Team Reports - Alpha</title>
-    </head>
-    <body class="h-100 d-flex">
-        <%=require('html-loader!./src/components/sidebar.html').default%>
-        <div class="content w-100 d-flex flex-column">
-            <div class="header justify-content-between">
-                <nav aria-label="Team reports navigation">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link active" href="team_reports.html"
-                                >Immediate Team</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a
-                                class="page-link"
-                                href="extended_team_reports.html"
-                                >Extended Team</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
+  <head>
+    <meta charset="utf-8" />
+    <title>Team Reports - Alpha</title>
+  </head>
+  <body class="h-100 d-flex">
+    <%=require('html-loader!./src/components/sidebar.html').default%>
+    <div class="content w-100 d-flex flex-column">
+      <div class="header justify-content-between">
+        <nav aria-label="Team reports navigation">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link active" href="team_reports.html"
+                >Immediate Team</a
+              >
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="extended_team_reports.html"
+                >Extended Team</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-                <div class="profile-icon-group">
-                    <div
-                        class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow bg-yellow"
-                    >
-                        +3
-                    </div>
-                    <div
-                        class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow"
-                    >
-                        AL
-                    </div>
-                    <div
-                        class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow"
-                    >
-                        VS
-                    </div>
-                    <div
-                        class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow"
-                    >
-                        AR
-                    </div>
-                </div>
-                <div class="fs-2">
-                    Your team
-                    <span class="fw-bold">has not submitted reports</span> this
-                    week.
-                </div>
-            </div>
-            <div class="container py-5">
-                <nav aria-label="Team reports navigation " class="pb-5">
-                    <ul class="pagination d-flex justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link active" href="#"
-                                >Previous Period: 5/16 - 5/22</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#"
-                                >Current Period: 5/23 - 5/29</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Older Reports</a>
-                        </li>
-                    </ul>
-                </nav>
-                <h5 class="w-100 text-center text-uppercase fw-bold mt-5">
-                    Immediate Team
-                </h5>
-                <div class="w-100 d-flex justify-content-center mt-3 mb-5">
-                    <div class="underline"></div>
-                </div>
-                <div class="w-100 d-flex justify-content-end">
-                    <button
-                        class="btn btn-sm btn-secondary"
-                        data-bs-toggle="collapse"
-                        data-bs-target=".accordion-collapse"
-                    >
-                        Expand all
-                    </button>
-                </div>
-                <div class="row w-100 report-header mx-auto my-2 shadow-sm">
-                    <div class="col-8"></div>
-                    <div class="col text-center">Morale</div>
-                    <div class="col text-center">Stress</div>
-                    <div class="col text-center">Workload</div>
-                    <div class="col"></div>
-                    <div style="width: 20px"></div>
-                </div>
-                <div class="accordion shadow-sm mb-2" id="accordion1">
-                    <div class="accordion-item">
-                        <h2
-                            class="accordion-header position-relative"
-                            id="heading1"
-                        >
-                            <button
-                                class="w-100 accordion-button accordion-icon-hidden row mx-auto collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapse1"
-                            >
-                                <div class="col-8 d-flex align-items-center">
-                                    <div
-                                        class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow me-3"
-                                    >
-                                        AR
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <div>Aleksey Rudenko</div>
-                                        <div class="text-light-gray fs-5">
-                                            is missing a report
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="col"></div>
-                            </button>
-                        </h2>
-                    </div>
-                </div>
-                <div class="accordion shadow-sm mb-2" id="accordion1">
-                    <div class="accordion-item">
-                        <h2
-                            class="accordion-header position-relative"
-                            id="heading1"
-                        >
-                            <button
-                                class="w-100 accordion-button accordion-icon-hidden row mx-auto collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapse1"
-                            >
-                                <div class="col-8 d-flex align-items-center">
-                                    <div
-                                        class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow me-3"
-                                    >
-                                        VS
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <div>Valeriia Stavriadi</div>
-                                        <div class="text-light-gray fs-5">
-                                            is missing a report
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="col"></div>
-                            </button>
-                        </h2>
-                    </div>
-                </div>
-                <div class="accordion shadow-sm mb-2" id="accordion1">
-                    <div class="accordion-item">
-                        <h2
-                            class="accordion-header position-relative"
-                            id="heading1"
-                        >
-                            <button
-                                class="w-100 accordion-button accordion-icon-hidden row mx-auto collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapse1"
-                            >
-                                <div class="col-8 d-flex align-items-center">
-                                    <div
-                                        class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow me-3"
-                                    >
-                                        AL
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <div>Aleksei Levshinskii</div>
-                                        <div class="text-light-gray fs-5">
-                                            is missing a report
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div
-                                    class="col d-flex justify-content-center opacity-0"
-                                >
-                                    <img
-                                        src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="col"></div>
-                            </button>
-                        </h2>
-                    </div>
-                </div>
-            </div>
+        <div class="profile-icon-group">
+          <div
+            class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow bg-yellow"
+          >
+            +3
+          </div>
+          <div
+            class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow"
+          >
+            AL
+          </div>
+          <div
+            class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow"
+          >
+            VS
+          </div>
+          <div
+            class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow"
+          >
+            AR
+          </div>
         </div>
-        <%=require('html-loader!./src/components/fixed_btns.html').default%>
-    </body>
+        <div class="fs-2">
+          Your team
+          <span class="fw-bold">has not submitted reports</span> this week.
+        </div>
+      </div>
+      <div class="container py-5">
+        <nav aria-label="Team reports navigation " class="pb-5">
+          <ul class="pagination d-flex justify-content-center">
+            <li class="page-item">
+              <a class="page-link active" href="#"
+                >Previous Period: 5/16 - 5/22</a
+              >
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Current Period: 5/23 - 5/29</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Older Reports</a>
+            </li>
+          </ul>
+        </nav>
+        <h5 class="w-100 text-center text-uppercase fw-bold mt-5">
+          Immediate Team
+        </h5>
+        <div class="w-100 d-flex justify-content-center mt-3 mb-5">
+          <div class="underline"></div>
+        </div>
+        <div class="w-100 d-flex justify-content-end">
+          <button
+            class="btn btn-sm btn-secondary"
+            data-bs-toggle="collapse"
+            data-bs-target=".accordion-collapse"
+          >
+            Expand all
+          </button>
+        </div>
+        <div class="row w-100 report-header mx-auto my-2 shadow-sm">
+          <div class="col-8"></div>
+          <div class="col text-center">Morale</div>
+          <div class="col text-center">Stress</div>
+          <div class="col text-center">Workload</div>
+          <div class="col"></div>
+          <div style="width: 20px"></div>
+        </div>
+        <div class="accordion shadow-sm mb-2" id="accordion1">
+          <div class="accordion-item">
+            <h2 class="accordion-header position-relative" id="heading1">
+              <button
+                class="w-100 accordion-button accordion-icon-hidden row mx-auto collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                <div class="col-8 d-flex align-items-center">
+                  <div
+                    class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow me-3"
+                  >
+                    AR
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div>Aleksey Rudenko</div>
+                    <div class="text-light-gray fs-5">is missing a report</div>
+                  </div>
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col"></div>
+              </button>
+            </h2>
+          </div>
+        </div>
+        <div class="accordion shadow-sm mb-2" id="accordion1">
+          <div class="accordion-item">
+            <h2 class="accordion-header position-relative" id="heading1">
+              <button
+                class="w-100 accordion-button accordion-icon-hidden row mx-auto collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                <div class="col-8 d-flex align-items-center">
+                  <div
+                    class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow me-3"
+                  >
+                    VS
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div>Valeriia Stavriadi</div>
+                    <div class="text-light-gray fs-5">is missing a report</div>
+                  </div>
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col"></div>
+              </button>
+            </h2>
+          </div>
+        </div>
+        <div class="accordion shadow-sm mb-2" id="accordion1">
+          <div class="accordion-item">
+            <h2 class="accordion-header position-relative" id="heading1">
+              <button
+                class="w-100 accordion-button accordion-icon-hidden row mx-auto collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                <div class="col-8 d-flex align-items-center">
+                  <div
+                    class="profile-icon profile-icon-sm profile-icon-bordered fs-5 shadow me-3"
+                  >
+                    AL
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div>Aleksei Levshinskii</div>
+                    <div class="text-light-gray fs-5">is missing a report</div>
+                  </div>
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col d-flex justify-content-center opacity-0">
+                  <img
+                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                    alt=""
+                  />
+                </div>
+                <div class="col"></div>
+              </button>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%=require('html-loader!./src/components/fixed_btns.html').default%>
+  </body>
 </html>
