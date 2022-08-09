@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Member's Information</title>
+</head>
+
+<body class="h-100 d-flex">
+    <%=require('html-loader!./src/components/sidebar.html').default%>
+        <div class="content w-100 d-flex flex-column">
+            <div class="header">
+                <div class="profile-icon">
+                    <h2>AK</h2>
+                </div>
+                <h1 class="fw-bold">Anatoliy Kolodkin</h1>
+                <p>anatoliy@ankosoftware.com</p>
+            </div>
+            <div class="d-flex row p-5 mx-5">
+                <div>
+                    <h2 class="fw-bold"><strong>Edit Anatoliy's information</strong></h2>
+                    <p>You may assign leaders or team members to this person, as well as deactivate their account if
+                        they no longer work for your organization.</p>
+                </div>
+                <div class="fw-bold pt-5">BASIC PROFILE INFORMATION
+                    <hr class="mt-1">
+                    <label for="firstName" class="form-label fw-bold mt-2">First Name</label>
+                    <input type="text" class="form-control" style="width: 15rem;" id="firstName" placeholder="Anatoliy">
+                    <label for="lastName" class="form-label fw-bold mt-3">Last Name</label>
+                    <input type="text" class="form-control" style="width: 25rem;" id="lastName" placeholder="Kolodkin">
+                    <label for="title" class="form-label fw-bold mt-3">Title</label>
+                    <input type="text" class="form-control" style="width: 35rem;" id="title" placeholder="CEO">
+                    <button class="btn btn-warning mt-3 fw-bold" type="submit" value="Submit">Save</button>
+                </div>
+                <div class="fw-bold pt-5">ANATOLIY REPORTS TO THE FOLLOWING LEADERS:
+                    <hr class="mt-1">
+                </div>
+                <div>
+                    <button class="btn btn-dark mt-1 fw-bold">Nikolai Kapustin</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Nina Mammadova</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Natalia Starkova</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Anton Tarkhanov</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Alexandr Vovchuk</button>
+                    <form action="team_members.html" method="get">
+                        <button class="btn btn-outline-dark mt-3 fw-bold">Edit Leader(s)</button>
+                    </form>
+                </div>
+                <div class="fw-bold pt-5">THE FOLLOWING TEAM MEMBERS REPORT TO ANATOLIY:
+                    <hr class="mt-1">
+                </div>
+                <div>
+                    <button class="btn btn-dark mt-1 fw-bold">Aleksandr Evseev</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Nikolai Kapustin</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Anna Kotova</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Nina Mammadova</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Natalia Starkova</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Anton Tarkhanov</button>
+                    <button class="btn btn-dark mt-1 fw-bold">Alexandr Vovchuk</button>
+                    <form action="team_members.html" method="get">
+                        <button class="btn btn-outline-dark mt-3 fw-bold">Edit Member(s)</button>
+                    </form>
+                </div>
+                <div class="fw-bold pt-5">ANATOLIY'S INVITE LINK:
+                    <hr class="mt-1">
+                </div>
+                <p>Share the following link to invite team members on Anatoliy's behalf.</p>
+                <div>
+                    <div class="mb-3" style="width: 50%; position: relative; left: 50%; transform: translate(-50%, 0);">
+                        <label for="link" class="form-label"></label>
+                        <textarea class="form-control" wrap="off" id="link"
+                            placeholder="http://weeklyreport.entreleadership.com/accept/eyJsaWQiOikjnisunguksznbksfjugbhiukxhfgnbkjsf"
+                            rows="3"></textarea>
+                    </div>
+                    <button onclick="myFunction()" class="btn btn-warning mt-3 fw-bold"
+                        style="position: relative; left: 50%; transform: translate(-50%, 0);">Copy Link</button>
+                </div>
+            </div>
+            <%=require('html-loader!./src/components/fixed_btns.html').default%>
+        </div>
+</body>
+
+</html>
