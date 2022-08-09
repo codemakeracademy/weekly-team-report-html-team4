@@ -103,6 +103,7 @@ body {
 }
 
 .accordion-icon-hidden {
+    cursor: default !important;;
     &:after{
         content: none!important;
     }

@@ -745,7 +745,7 @@ $input-btn-focus-color: rgba(
     $component-active-bg,
     $input-btn-focus-color-opacity
 );
-$input-btn-focus-blur:          0 ;
+$input-btn-focus-blur:          0.5;
 $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
     $input-btn-focus-color;
 
@@ -1223,12 +1223,12 @@ $pagination-border-color:           $dark ;
 
 $pagination-focus-color:            $yellow;
 $pagination-focus-bg:               $dark;
-// $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
+$pagination-focus-box-shadow:       $input-btn-focus-box-shadow ;
 // $pagination-focus-outline:          0 !default;
 
 $pagination-hover-color:            var(--#{$prefix}link-hover-color) ;
 $pagination-hover-bg:               $dark;
-$pagination-hover-border-color:     $yellow;
+$pagination-hover-border-color:     $dark;
 
 $pagination-active-color:           $white;
 $pagination-active-bg:              $dark;
