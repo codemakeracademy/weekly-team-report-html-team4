@@ -21,13 +21,10 @@ body {
   background-size: cover;
 }
 
-<<<<<<< HEAD
-=======
 .bg-yellow {
     background-color: $yellow !important;
 }
 
->>>>>>> 9af010a03c87643a62a1499e9fb90123b17d5abe
 .profile-icon {
   background-color: $gray-300;
   width: 100px;
@@ -70,7 +67,6 @@ body {
 }
 
 .report-header {
-<<<<<<< HEAD
   background-color: white;
   padding: $accordion-button-padding-y $accordion-button-padding-x;
   border-radius: $border-radius;
@@ -105,10 +101,9 @@ body {
 }
 .bg-face-very-happy {
   background-color: mix($white, $very-happy, $bg-faces-opacity);
-=======
-    background-color: white;
-    padding: $accordion-button-padding-y $accordion-button-padding-x;
-    border-radius: $border-radius;
+  background-color: white;
+  padding: $accordion-button-padding-y $accordion-button-padding-x;
+  border-radius: $border-radius;
 }
 
 .accordion-button {
@@ -144,5 +139,4 @@ body {
     &:after{
         content: none!important;
     }
->>>>>>> 9af010a03c87643a62a1499e9fb90123b17d5abe
 }
