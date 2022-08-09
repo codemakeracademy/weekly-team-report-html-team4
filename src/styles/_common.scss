@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 body {
   min-height: 100vh;
@@ -15,10 +15,10 @@ body {
 }
 
 .bg-brush {
-  background-image: url("../images/big-title-brush-background.png");
-  background-repeat: no-repeat;
-  width: max-content;
-  background-size: cover;
+    background-image: url('../images/big-title-brush-background.png');
+    background-repeat: no-repeat;
+    width: max-content;
+    background-size: cover;
 }
 
 .bg-yellow {
@@ -135,8 +135,8 @@ body {
 }
 
 .accordion-icon-hidden {
-    cursor: default !important;;
-    &:after{
-        content: none!important;
+    cursor: default !important;
+    &:after {
+        content: none !important;
     }
 }

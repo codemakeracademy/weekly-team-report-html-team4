@@ -2,7 +2,7 @@
 @import "~bootstrap/scss/_variables.scss";
 @import "~bootstrap/scss/_mixins.scss";
 
-$bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts";
+$bootstrap-icons-font-dir: '~bootstrap-icons/font/fonts';
 
 $yellow: #f0c815;
 $dark: #1f2426;
@@ -334,14 +334,14 @@ $light: $white;
 
 // // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
 );
 // // scss-docs-end theme-colors-map
 
@@ -430,10 +430,10 @@ $body-bg: #f5f7f8;
 // //
 // // Style anchor elements.
 
-$link-color:                              $gray-light;
+$link-color: $gray-light;
 // $link-decoration:                         underline !default;
 // $link-shade-percentage:                   20% !default;
-$link-hover-color:                        $yellow;
+$link-hover-color: $yellow;
 // $link-hover-decoration:                   null !default;
 
 // $stretched-link-pseudo-element:           after !default;
@@ -745,7 +745,7 @@ $input-btn-focus-color: rgba(
   $component-active-bg,
   $input-btn-focus-color-opacity
 );
-$input-btn-focus-blur:          0.5;
+$input-btn-focus-blur: 0.5;
 $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
   $input-btn-focus-color;
 
@@ -1214,25 +1214,25 @@ $nav-pills-link-active-bg: $dark;
 
 // $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  var(--#{$prefix}link-color);
-$pagination-bg:                     $dark ;
+$pagination-color: var(--#{$prefix}link-color);
+$pagination-bg: $dark;
 // $pagination-border-radius:          $border-radius !default;
-$pagination-border-width:           2px;
-$pagination-margin-start:           ($pagination-border-width * -1);
-$pagination-border-color:           $dark ;
+$pagination-border-width: 2px;
+$pagination-margin-start: ($pagination-border-width * -1);
+$pagination-border-color: $dark;
 
-$pagination-focus-color:            $yellow;
-$pagination-focus-bg:               $dark;
-$pagination-focus-box-shadow:       $input-btn-focus-box-shadow ;
+$pagination-focus-color: $yellow;
+$pagination-focus-bg: $dark;
+$pagination-focus-box-shadow: $input-btn-focus-box-shadow;
 // $pagination-focus-outline:          0 !default;
 
-$pagination-hover-color:            var(--#{$prefix}link-hover-color) ;
-$pagination-hover-bg:               $dark;
-$pagination-hover-border-color:     $dark;
+$pagination-hover-color: var(--#{$prefix}link-hover-color);
+$pagination-hover-bg: $dark;
+$pagination-hover-border-color: $dark;
 
-$pagination-active-color:           $white;
-$pagination-active-bg:              $dark;
-$pagination-active-border-color:    $yellow ;
+$pagination-active-color: $white;
+$pagination-active-bg: $dark;
+$pagination-active-border-color: $yellow;
 
 // $pagination-disabled-color:         $gray-600 !default;
 // $pagination-disabled-bg:            $white !default;
