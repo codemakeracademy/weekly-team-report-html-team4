@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Invite Your Team</title>
-    </head>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Invite Your Team</title>
+  </head>
 
     <body class="h-100 d-flex">
         <%=require('html-loader!./src/components/sidebar.html').default%>
-        <div class="w-100">
+        <div class="content w-100 d-flex flex-column">
             <div class="header">
                 <header class="text-center text-light">
                     <h1 class="display-5 fw-bold">Invite Your Team</h1>
                 </header>
             </div>
-            <div class="container-fluid mt-3 p-2" style="width: 50rem">
+            <div class="container d-flex flex-column mt-3 p-2" style="width: 60%; min-width: 700px;">
                 <div class="card-body card shadow-sm">
                     <strong class="pb-3"
                         >Success! Your team member has been invited to the
@@ -29,7 +30,7 @@
                     </p>
                 </div>
             </div>
-            <form class="container-fluid p-2" style="width: 50rem">
+            <form class="container d-flex flex-column mt-3 p-2" style="width: 60%; min-width: 700px;">
                 <div class="card-body card shadow-sm">
                     <div class="pb-2">
                         <strong
