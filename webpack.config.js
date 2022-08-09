@@ -43,6 +43,14 @@ const config = {
     new HtmlWebpackPlugin({
       template: "edit_profile.html",
       filename: "edit_profile.html"
+     }),
+    new HtmlWebpackPlugin({
+      template: "team_reports.html",
+      filename: "team_reports.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "extended_team_reports.html",
+      filename: "extended_team_reports.html"
     }),
     
     // Add your plugins here
