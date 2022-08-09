@@ -1,674 +1,648 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Fill out a Report - Alpha</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fill out a Report - Alpha</title>
+  </head>
 
-    <body class="h-100 d-flex">
-        <%=require('html-loader!./src/components/sidebar.html').default%>
+  <body class="h-100 d-flex">
+    <%=require('html-loader!./src/components/sidebar.html').default%>
 
-        <div class="w-100">
-            <header
-                class="text-center d-flex flex-column align-items-center py-5"
-            >
-                <div class="bg-brush">
-                    <h1 class="px-5 py-2 fw-bold">Welcome back,</h1>
-                </div>
-                <h1 class="pb-2 fw-bold">Teammate.</h1>
-                <p>
-                    Let your leader know where you're winning and struggling
-                    this week — in less than 10 minutes.
-                </p>
-            </header>
-            <form class="mt-3 p-2 container-fluid">
-                <div class="container mx-auto text-center">
-                    <div class="mb-5 pb-5">
-                        <h3 class="form-label pb-3">
-                            How was your morale this week?
-                        </h3>
-                        <div
-                            class="d-flex justify-content-between"
-                            id="input-group"
-                        >
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="moraleOptions"
-                                id="moraleOption1"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="moraleOption1"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-sad-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-sad.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />
-                                Very Low</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="moraleOptions"
-                                id="moraleOption2"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="moraleOption2"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/sad-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/sad.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Low</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="moraleOptions"
-                                id="moraleOption3"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="moraleOption3"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/neutral-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/neutral.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Okay</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="moraleOptions"
-                                id="moraleOption4"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="moraleOption4"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/happy-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/happy.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Good</label
-                            >
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="moraleOptions"
-                                id="moraleOption5"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="moraleOption5"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-happy.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Great</label
-                            >
-                        </div>
-                    </div>
-                    <div class="mb-5 pb-5">
-                        <h3 class="form-label pb-3">
-                            How was your stress this week?
-                        </h3>
-                        <div
-                            class="d-flex justify-content-between"
-                            id="input-group"
-                        >
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="stressOptions"
-                                id="stressOption1"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="stressOption1"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-sad-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-sad.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />
-                                Very Low</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="stressOptions"
-                                id="stressOption2"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="stressOption2"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/sad-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/sad.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Low</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="stressOptions"
-                                id="stressOption3"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="stressOption3"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/neutral-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/neutral.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Okay</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="stressOptions"
-                                id="stressOption4"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="stressOption4"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/happy-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/happy.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Good</label
-                            >
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="stressOptions"
-                                id="stressOption5"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="stressOption5"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-happy.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Great</label
-                            >
-                        </div>
-                    </div>
-                    <div class="mb-5 pb-5">
-                        <h3 class="form-label pb-3">
-                            How was your workload this week?
-                        </h3>
-                        <div
-                            class="d-flex justify-content-between"
-                            id="input-group"
-                        >
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="workloadOptions"
-                                id="workloadOption1"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="workloadOption1"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-sad-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-sad.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />
-                                Very Low</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="workloadOptions"
-                                id="workloadOption2"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="workloadOption2"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/sad-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/sad.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Low</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="workloadOptions"
-                                id="workloadOption3"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="workloadOption3"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/neutral-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/neutral.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Okay</label
-                            >
-
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="workloadOptions"
-                                id="workloadOption4"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="workloadOption4"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/happy-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/happy.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Good</label
-                            >
-                            <input
-                                type="radio"
-                                class="btn-check"
-                                name="workloadOptions"
-                                id="workloadOption5"
-                                autocomplete="off"
-                                onchange="toggleImages(event)"
-                                required
-                            />
-                            <label
-                                class="btn btn-light d-flex flex-column py-4 align-items-center"
-                                for="workloadOption5"
-                                style="width: 15%"
-                                ><img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
-                                    alt=""
-                                    id="not-checked"
-                                />
-
-                                <img
-                                    class="w-75 mb-3"
-                                    src="<%=require('./src/images/very-happy.svg')%>"
-                                    alt=""
-                                    id="checked"
-                                    style="display: none"
-                                />Great</label
-                            >
-                        </div>
-                    </div>
-                    <div class="mb-5 position-relative">
-                        <h3 class="form-label pb-3" for="highTextarea">
-                            What was your high this week?
-                        </h3>
-                        <textarea
-                            class="form-control pb-5"
-                            id="highTextarea"
-                            rows="5"
-                            maxlength="600"
-                            onkeydown="limit(this);"
-                            onkeyup="limit(this);"
-                            placeholder="What was your personal or professional high this week? What's the one thing you accomplished at work this week?"
-                        ></textarea>
-                        <span
-                            name="spaces"
-                            disabled
-                            class="position-absolute bg-transparent border-0 text-muted text-end w-min-content px-3 py-3"
-                            style="bottom: 0; right: 0"
-                            >600</span
-                        >
-                    </div>
-                    <div class="mb-5 position-relative">
-                        <h3 class="form-label pb-3" for="lowTextarea">
-                            What was your low this week?
-                        </h3>
-                        <textarea
-                            class="form-control pb-5"
-                            id="lowTextarea"
-                            rows="5"
-                            maxlength="600"
-                            onkeydown="limit(this);"
-                            onkeyup="limit(this);"
-                            placeholder="What was your personal or professional low this week?"
-                        ></textarea>
-                        <span
-                            name="spaces"
-                            disabled
-                            class="position-absolute bg-transparent border-0 text-muted text-end w-min-content px-3 py-3"
-                            style="bottom: 0; right: 0"
-                            >600</span
-                        >
-                    </div>
-                    <div class="mb-5 position-relative">
-                        <h3 class="form-label pb-3" for="elseTextarea">
-                            Anything else?
-                        </h3>
-                        <textarea
-                            class="form-control pb-5 optional"
-                            id="elseTextarea"
-                            rows="5"
-                            maxlength="400"
-                            onkeydown="limit(this);"
-                            onkeyup="limit(this);"
-                            placeholder="Is there anything else you would like to share with your leader? *Optional"
-                        ></textarea>
-                        <span
-                            name="spaces"
-                            disabled
-                            class="position-absolute bg-transparent border-0 text-muted text-end w-min-content px-3 py-3"
-                            style="bottom: 0; right: 0"
-                            >400</span
-                        >
-                    </div>
-                    <div class="pb-5">
-                        <h3 class="form-label pb-3" for="elseTextarea">
-                            Date range
-                        </h3>
-                        <div class="form mx-auto">
-                            <label
-                                for="exampleInputPassword1"
-                                class="form-label text-start w-100"
-                                ><strong>Choose date</strong></label
-                            >
-                            <select
-                                class="form-select form-select-lg"
-                                aria-label="Default select example"
-                            >
-                                <option selected>
-                                    Current Range: May 23 - May 29
-                                </option>
-                                <option value="1">May 18 - May 22</option>
-                                <option value="2">May 11 - May 17</option>
-                                <option value="3">May 4 - May 10</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column align-items-center">
-                        <label class="text-danger mb-3" id="invalidFormMsg"
-                            >All fields are required unless marked as
-                            optional.</label
-                        >
-                        <button
-                            type="submit"
-                            class="btn btn-warning btn-disabled mb-5"
-                            id="submit"
-                            onclick="formSubmit(event);"
-                        >
-                            <strong>Send Weekly Report</strong>
-                        </button>
-                    </div>
-                </div>
-            </form>
-            <%=require('html-loader!./src/components/fixed_btns.html').default%>
+    <div class="w-100">
+      <header class="text-center d-flex flex-column align-items-center py-5">
+        <div class="bg-brush">
+          <h1 class="px-5 py-2 fw-bold">Welcome back,</h1>
         </div>
-    </body>
+        <h1 class="pb-2 fw-bold">Teammate.</h1>
+        <p>
+          Let your leader know where you're winning and struggling this week —
+          in less than 10 minutes.
+        </p>
+      </header>
+      <form class="mt-3 p-2 container-fluid">
+        <div class="container mx-auto text-center">
+          <div class="mb-5 pb-5">
+            <h3 class="form-label pb-3">How was your morale this week?</h3>
+            <div class="d-flex justify-content-between" id="input-group">
+              <input
+                type="radio"
+                class="btn-check"
+                name="moraleOptions"
+                id="moraleOption1"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="moraleOption1"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-sad-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-sad.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />
+                Very Low</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="moraleOptions"
+                id="moraleOption2"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="moraleOption2"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/sad-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/sad.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Low</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="moraleOptions"
+                id="moraleOption3"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="moraleOption3"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/neutral-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/neutral.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Okay</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="moraleOptions"
+                id="moraleOption4"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="moraleOption4"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/happy-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/happy.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Good</label
+              >
+              <input
+                type="radio"
+                class="btn-check"
+                name="moraleOptions"
+                id="moraleOption5"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="moraleOption5"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-happy.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Great</label
+              >
+            </div>
+          </div>
+          <div class="mb-5 pb-5">
+            <h3 class="form-label pb-3">How was your stress this week?</h3>
+            <div class="d-flex justify-content-between" id="input-group">
+              <input
+                type="radio"
+                class="btn-check"
+                name="stressOptions"
+                id="stressOption1"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="stressOption1"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-sad-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-sad.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />
+                Very Low</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="stressOptions"
+                id="stressOption2"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="stressOption2"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/sad-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/sad.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Low</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="stressOptions"
+                id="stressOption3"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="stressOption3"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/neutral-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/neutral.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Okay</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="stressOptions"
+                id="stressOption4"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="stressOption4"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/happy-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/happy.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Good</label
+              >
+              <input
+                type="radio"
+                class="btn-check"
+                name="stressOptions"
+                id="stressOption5"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="stressOption5"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-happy.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Great</label
+              >
+            </div>
+          </div>
+          <div class="mb-5 pb-5">
+            <h3 class="form-label pb-3">How was your workload this week?</h3>
+            <div class="d-flex justify-content-between" id="input-group">
+              <input
+                type="radio"
+                class="btn-check"
+                name="workloadOptions"
+                id="workloadOption1"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="workloadOption1"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-sad-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-sad.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />
+                Very Low</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="workloadOptions"
+                id="workloadOption2"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="workloadOption2"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/sad-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/sad.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Low</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="workloadOptions"
+                id="workloadOption3"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="workloadOption3"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/neutral-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/neutral.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Okay</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="workloadOptions"
+                id="workloadOption4"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="workloadOption4"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/happy-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/happy.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Good</label
+              >
+              <input
+                type="radio"
+                class="btn-check"
+                name="workloadOptions"
+                id="workloadOption5"
+                autocomplete="off"
+                onchange="toggleImages(event)"
+                required
+              />
+              <label
+                class="btn btn-light d-flex flex-column py-4 align-items-center"
+                for="workloadOption5"
+                style="width: 15%"
+                ><img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-happy-greyed-out.svg')%>"
+                  alt=""
+                  id="not-checked"
+                />
+
+                <img
+                  class="w-75 mb-3"
+                  src="<%=require('./src/images/very-happy.svg')%>"
+                  alt=""
+                  id="checked"
+                  style="display: none"
+                />Great</label
+              >
+            </div>
+          </div>
+          <div class="mb-5 position-relative">
+            <h3 class="form-label pb-3" for="highTextarea">
+              What was your high this week?
+            </h3>
+            <textarea
+              class="form-control pb-5"
+              id="highTextarea"
+              rows="5"
+              maxlength="600"
+              onkeydown="limit(this);"
+              onkeyup="limit(this);"
+              placeholder="What was your personal or professional high this week? What's the one thing you accomplished at work this week?"
+            ></textarea>
+            <span
+              name="spaces"
+              disabled
+              class="position-absolute bg-transparent border-0 text-muted text-end w-min-content px-3 py-3"
+              style="bottom: 0; right: 0"
+              >600</span
+            >
+          </div>
+          <div class="mb-5 position-relative">
+            <h3 class="form-label pb-3" for="lowTextarea">
+              What was your low this week?
+            </h3>
+            <textarea
+              class="form-control pb-5"
+              id="lowTextarea"
+              rows="5"
+              maxlength="600"
+              onkeydown="limit(this);"
+              onkeyup="limit(this);"
+              placeholder="What was your personal or professional low this week?"
+            ></textarea>
+            <span
+              name="spaces"
+              disabled
+              class="position-absolute bg-transparent border-0 text-muted text-end w-min-content px-3 py-3"
+              style="bottom: 0; right: 0"
+              >600</span
+            >
+          </div>
+          <div class="mb-5 position-relative">
+            <h3 class="form-label pb-3" for="elseTextarea">Anything else?</h3>
+            <textarea
+              class="form-control pb-5 optional"
+              id="elseTextarea"
+              rows="5"
+              maxlength="400"
+              onkeydown="limit(this);"
+              onkeyup="limit(this);"
+              placeholder="Is there anything else you would like to share with your leader? *Optional"
+            ></textarea>
+            <span
+              name="spaces"
+              disabled
+              class="position-absolute bg-transparent border-0 text-muted text-end w-min-content px-3 py-3"
+              style="bottom: 0; right: 0"
+              >400</span
+            >
+          </div>
+          <div class="pb-5">
+            <h3 class="form-label pb-3" for="elseTextarea">Date range</h3>
+            <div class="form mx-auto">
+              <label
+                for="exampleInputPassword1"
+                class="form-label text-start w-100"
+                ><strong>Choose date</strong></label
+              >
+              <select
+                class="form-select form-select-lg"
+                aria-label="Default select example"
+              >
+                <option selected>Current Range: May 23 - May 29</option>
+                <option value="1">May 18 - May 22</option>
+                <option value="2">May 11 - May 17</option>
+                <option value="3">May 4 - May 10</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <label class="text-danger mb-3" id="invalidFormMsg"
+              >All fields are required unless marked as optional.</label
+            >
+            <button
+              type="submit"
+              class="btn btn-warning btn-disabled mb-5"
+              id="submit"
+              onclick="formSubmit(event);"
+            >
+              <strong>Send Weekly Report</strong>
+            </button>
+          </div>
+        </div>
+      </form>
+      <%=require('html-loader!./src/components/fixed_btns.html').default%>
+    </div>
+  </body>
 </html>
 
 <script>
+  function toggleImages(event) {
+    event.stopPropagation();
+    const input = event.target;
+    const inputGroup = input.closest("#input-group");
 
-    function toggleImages(event) {
-        event.stopPropagation();
-        const input = event.target;
-        const inputGroup = input.closest("#input-group");
+    const inputs = inputGroup.getElementsByClassName("btn-check");
+    Array.from(inputs).forEach((input) => {
+      const label = input.labels[0];
+      const checkedImg = label.querySelector("#checked");
+      const notCheckedImg = label.querySelector("#not-checked");
+      if (input.checked) {
+        checkedImg.style.display = "block";
+        notCheckedImg.style.display = "none";
+      } else {
+        checkedImg.style.display = "none";
+        notCheckedImg.style.display = "block";
+      }
+    });
+    isFormValid();
+  }
 
-        const inputs = inputGroup.getElementsByClassName("btn-check");
-        Array.from(inputs).forEach((input) => {
-            const label = input.labels[0];
-            const checkedImg = label.querySelector("#checked");
-            const notCheckedImg = label.querySelector("#not-checked");
-            if (input.checked) {
-                checkedImg.style.display = "block";
-                notCheckedImg.style.display = "none";
-            } else {
-                checkedImg.style.display = "none";
-                notCheckedImg.style.display = "block";
-            }
-        });
-        isFormValid();
+  function limit(element) {
+    const length = element.value.length;
+    const maxlength = parseInt(element.getAttribute("maxlength"), 10);
+
+    const spacesSpan = element.nextSibling.nextSibling;
+    spacesSpan.innerHTML = +maxlength - +length;
+    isFormValid();
+  }
+
+  function isFormValid() {
+    let isValid = true;
+    const checkedRadiosNeeded = 3;
+
+    const msgLabel = document.querySelector("#invalidFormMsg");
+    const btnSubmit = document.querySelector("#submit");
+    const inputs = document.getElementsByTagName("input");
+    let checkedRadiosCount = 0;
+    Array.from(inputs).forEach((i) => {
+      if (i.checked) {
+        checkedRadiosCount++;
+      }
+    });
+    if (checkedRadiosCount < checkedRadiosNeeded) {
+      isValid = false;
     }
 
-    function limit(element) {
-        const length = element.value.length;
-        const maxlength = parseInt(element.getAttribute("maxlength"), 10);
+    const textareasArray = Array.from(
+      document.getElementsByTagName("textarea")
+    );
+    const optionalTextareasArray = Array.from(
+      document.getElementsByClassName("optional")
+    );
 
-        const spacesSpan = element.nextSibling.nextSibling;
-        spacesSpan.innerHTML = +maxlength - +length;
-        isFormValid();
-    }
-
-    function isFormValid() {
-        let isValid = true;
-        const checkedRadiosNeeded = 3;
-
-        const msgLabel = document.querySelector("#invalidFormMsg");
-        const btnSubmit = document.querySelector("#submit");
-        const inputs = document.getElementsByTagName("input");
-        let checkedRadiosCount = 0;
-        Array.from(inputs).forEach((i) => {
-            if (i.checked) {
-                checkedRadiosCount++;
-            }
-        });
-        if (checkedRadiosCount < checkedRadiosNeeded) {
-            isValid = false;
+    textareasArray.forEach((t) => {
+      if (!optionalTextareasArray.includes(t)) {
+        if (t.value.length == 0) {
+          isValid = false;
         }
-
-        const textareasArray = Array.from(
-            document.getElementsByTagName("textarea")
-        );
-        const optionalTextareasArray = Array.from(
-            document.getElementsByClassName("optional")
-        );
-
-        textareasArray.forEach((t) => {
-            if (!optionalTextareasArray.includes(t)) {
-                if (t.value.length == 0) {
-                    isValid = false;
-                }
-            }
-        });
-        if (isValid) {
-            msgLabel.style.visibility = "hidden";
-            btnSubmit.classList.remove("btn-disabled");
-            return true;
-        } else {
-            msgLabel.style.visibility = "visible";
-            btnSubmit.classList.add("btn-disabled");
-            return false;
-        }
+      }
+    });
+    if (isValid) {
+      msgLabel.style.visibility = "hidden";
+      btnSubmit.classList.remove("btn-disabled");
+      return true;
+    } else {
+      msgLabel.style.visibility = "visible";
+      btnSubmit.classList.add("btn-disabled");
+      return false;
     }
+  }
 
-    function formSubmit(event) {
-        
-        event.preventDefault();
-        if (isFormValid()) {
-            console.log("form sended");
-        } else {
-        }
+  function formSubmit(event) {
+    event.preventDefault();
+    if (isFormValid()) {
+      console.log("form sended");
+    } else {
     }
+  }
 </script>

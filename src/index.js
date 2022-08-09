@@ -1,2 +1,2 @@
-import './styles/main.scss'
-import 'bootstrap/dist/js/bootstrap.js'
+import "./styles/main.scss";
+import "bootstrap/dist/js/bootstrap.js";

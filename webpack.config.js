@@ -22,29 +22,29 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       template: "invite_your_team.html",
-      filename: "invite_your_team.html"
+      filename: "invite_your_team.html",
     }),
     new HtmlWebpackPlugin({
       template: "invite_your_team_success.html",
-      filename: "invite_your_team_success.html"
+      filename: "invite_your_team_success.html",
     }),
     new HtmlWebpackPlugin({
       template: "fill_out_a_report.html",
-      filename: "fill_out_a_report.html"
+      filename: "fill_out_a_report.html",
     }),
     new HtmlWebpackPlugin({
       template: "my_company.html",
-      filename: "my_company.html"
+      filename: "my_company.html",
     }),
     new HtmlWebpackPlugin({
       template: "my_reports.html",
-      filename: "my_reports.html"
+      filename: "my_reports.html",
     }),
     new HtmlWebpackPlugin({
       template: "edit_profile.html",
-      filename: "edit_profile.html"
+      filename: "edit_profile.html",
     }),
-    
+
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
