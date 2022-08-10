@@ -74,6 +74,40 @@ body {
 
 .accordion-button {
     font-size: $accordion-button-font-size !important;
+    &::after {
+        content: '' !important;
+    }
+}
+
+.text-light-gray {
+    color: $gray-light;
+}
+
+.rounded {
+    border-radius: $border-radius;
+}
+
+.bg-face-very-sad {
+    background-color: mix($white, $very-sad, $bg-faces-opacity);
+}
+.bg-face-sad {
+    background-color: mix($white, $sad, $bg-faces-opacity);
+}
+.bg-face-neutral {
+    background-color: mix($white, $neutral, $bg-faces-opacity);
+}
+.bg-face-happy {
+    background-color: mix($white, $happy, $bg-faces-opacity);
+}
+.bg-face-very-happy {
+    background-color: mix($white, $very-happy, $bg-faces-opacity);
+    background-color: white;
+    padding: $accordion-button-padding-y $accordion-button-padding-x;
+    border-radius: $border-radius;
+}
+
+.accordion-button {
+    font-size: $accordion-button-font-size !important;
 }
 
 .text-light-gray {
