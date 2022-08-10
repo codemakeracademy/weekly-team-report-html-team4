@@ -103,8 +103,13 @@
     </aside>
 </div>
 <script>
-    const page = window.location.href.split('/').pop()
+    let page = window.location.href.split('/').pop()
 
+    if (page == '') {
+        page = 'index.html'
+    } else if (page == 'extended_team_reports.html') {
+        page = 'team_reports.html'
+    }
     Array.from(document.getElementsByClassName('nav-link')).forEach((l) => {
         if (l.ariaCurrent == page) {
             l.classList.add('active')
