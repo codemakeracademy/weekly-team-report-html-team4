@@ -1,8 +1,8 @@
-@import "~bootstrap/scss/_functions.scss";
-@import "~bootstrap/scss/_variables.scss";
-@import "~bootstrap/scss/_mixins.scss";
+@import '~bootstrap/scss/_functions.scss';
+@import '~bootstrap/scss/_variables.scss';
+@import '~bootstrap/scss/_mixins.scss';
 
-$bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts";
+$bootstrap-icons-font-dir: '~bootstrap-icons/font/fonts';
 
 $yellow: #f0c815;
 $dark: #1f2426;
@@ -334,14 +334,14 @@ $light: $white;
 
 // // scss-docs-start theme-colors-map
 $theme-colors: (
-    "primary": $primary,
-    "secondary": $secondary,
-    "success": $success,
-    "info": $info,
-    "warning": $warning,
-    "danger": $danger,
-    "light": $light,
-    "dark": $dark,
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
 );
 // // scss-docs-end theme-colors-map
 

@@ -591,81 +591,81 @@
 
 <script>
     function toggleImages(event) {
-        event.stopPropagation();
-        const input = event.target;
-        const inputGroup = input.closest("#input-group");
+        event.stopPropagation()
+        const input = event.target
+        const inputGroup = input.closest('#input-group')
 
-        const inputs = inputGroup.getElementsByClassName("btn-check");
+        const inputs = inputGroup.getElementsByClassName('btn-check')
         Array.from(inputs).forEach((input) => {
-            const label = input.labels[0];
-            const checkedImg = label.querySelector("#checked");
-            const notCheckedImg = label.querySelector("#not-checked");
+            const label = input.labels[0]
+            const checkedImg = label.querySelector('#checked')
+            const notCheckedImg = label.querySelector('#not-checked')
             if (input.checked) {
-                checkedImg.style.display = "block";
-                notCheckedImg.style.display = "none";
+                checkedImg.style.display = 'block'
+                notCheckedImg.style.display = 'none'
             } else {
-                checkedImg.style.display = "none";
-                notCheckedImg.style.display = "block";
+                checkedImg.style.display = 'none'
+                notCheckedImg.style.display = 'block'
             }
-        });
-        isFormValid();
+        })
+        isFormValid()
     }
 
     function limit(element) {
-        const length = element.value.length;
-        const maxlength = parseInt(element.getAttribute("maxlength"), 10);
+        const length = element.value.length
+        const maxlength = parseInt(element.getAttribute('maxlength'), 10)
 
-        const spacesSpan = element.nextSibling.nextSibling;
-        spacesSpan.innerHTML = +maxlength - +length;
-        isFormValid();
+        const spacesSpan = element.nextSibling.nextSibling
+        spacesSpan.innerHTML = +maxlength - +length
+        isFormValid()
     }
 
     function isFormValid() {
-        let isValid = true;
-        const checkedRadiosNeeded = 3;
+        let isValid = true
+        const checkedRadiosNeeded = 3
 
-        const msgLabel = document.querySelector("#invalidFormMsg");
-        const btnSubmit = document.querySelector("#submit");
-        const inputs = document.getElementsByTagName("input");
-        let checkedRadiosCount = 0;
+        const msgLabel = document.querySelector('#invalidFormMsg')
+        const btnSubmit = document.querySelector('#submit')
+        const inputs = document.getElementsByTagName('input')
+        let checkedRadiosCount = 0
         Array.from(inputs).forEach((i) => {
             if (i.checked) {
-                checkedRadiosCount++;
+                checkedRadiosCount++
             }
-        });
+        })
         if (checkedRadiosCount < checkedRadiosNeeded) {
-            isValid = false;
+            isValid = false
         }
 
         const textareasArray = Array.from(
-            document.getElementsByTagName("textarea")
-        );
+            document.getElementsByTagName('textarea')
+        )
         const optionalTextareasArray = Array.from(
-            document.getElementsByClassName("optional")
-        );
+            document.getElementsByClassName('optional')
+        )
 
         textareasArray.forEach((t) => {
             if (!optionalTextareasArray.includes(t)) {
                 if (t.value.length == 0) {
-                    isValid = false;
+                    isValid = false
                 }
             }
-        });
+        })
         if (isValid) {
-            msgLabel.style.visibility = "hidden";
-            btnSubmit.classList.remove("btn-disabled");
-            return true;
+            msgLabel.style.visibility = 'hidden'
+            btnSubmit.classList.remove('btn-disabled')
+            return true
         } else {
-            msgLabel.style.visibility = "visible";
-            btnSubmit.classList.add("btn-disabled");
-            return false;
+            msgLabel.style.visibility = 'visible'
+            btnSubmit.classList.add('btn-disabled')
+            return false
         }
     }
 
     function formSubmit(event) {
-        event.preventDefault();
+        event.preventDefault()
         if (isFormValid()) {
-            console.log("form sended");
+            console.log('form sended')
         } else {
         }
     }

@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 body {
     min-height: 100vh;
@@ -15,7 +15,7 @@ body {
 }
 
 .bg-brush {
-    background-image: url("../images/big-title-brush-background.png");
+    background-image: url('../images/big-title-brush-background.png');
     background-repeat: no-repeat;
     width: max-content;
     background-size: cover;
@@ -75,7 +75,7 @@ body {
 .accordion-button {
     font-size: $accordion-button-font-size !important;
     &::after {
-        content: "" !important;
+        content: '' !important;
     }
 }
 

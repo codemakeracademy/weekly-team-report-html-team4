@@ -1,56 +1,56 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const isProduction = process.env.NODE_ENV == "production";
+const isProduction = process.env.NODE_ENV == 'production'
 
-const stylesHandler = "style-loader";
+const stylesHandler = 'style-loader'
 
 const config = {
-    entry: "./src/index.js",
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, "build"),
+        path: path.resolve(__dirname, 'build'),
     },
     devServer: {
         open: true,
-        host: "localhost",
+        host: 'localhost',
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "index.html",
+            template: 'index.html',
         }),
         new HtmlWebpackPlugin({
-            template: "invite_your_team.html",
-            filename: "invite_your_team.html",
+            template: 'invite_your_team.html',
+            filename: 'invite_your_team.html',
         }),
         new HtmlWebpackPlugin({
-            template: "invite_your_team_success.html",
-            filename: "invite_your_team_success.html",
+            template: 'invite_your_team_success.html',
+            filename: 'invite_your_team_success.html',
         }),
         new HtmlWebpackPlugin({
-            template: "fill_out_a_report.html",
-            filename: "fill_out_a_report.html",
+            template: 'fill_out_a_report.html',
+            filename: 'fill_out_a_report.html',
         }),
         new HtmlWebpackPlugin({
-            template: "my_company.html",
-            filename: "my_company.html",
+            template: 'my_company.html',
+            filename: 'my_company.html',
         }),
         new HtmlWebpackPlugin({
-            template: "my_reports.html",
-            filename: "my_reports.html",
+            template: 'my_reports.html',
+            filename: 'my_reports.html',
         }),
         new HtmlWebpackPlugin({
-            template: "edit_profile.html",
-            filename: "edit_profile.html",
+            template: 'edit_profile.html',
+            filename: 'edit_profile.html',
         }),
         new HtmlWebpackPlugin({
-            template: "team_reports.html",
-            filename: "team_reports.html",
+            template: 'team_reports.html',
+            filename: 'team_reports.html',
         }),
         new HtmlWebpackPlugin({
-            template: "extended_team_reports.html",
-            filename: "extended_team_reports.html",
+            template: 'extended_team_reports.html',
+            filename: 'extended_team_reports.html',
         }),
 
         // Add your plugins here
@@ -60,32 +60,32 @@ const config = {
         rules: [
             {
                 test: /\.(js|jsx)$/i,
-                loader: "babel-loader",
+                loader: 'babel-loader',
             },
             {
                 test: /\.css$/i,
-                use: [stylesHandler, "css-loader"],
+                use: [stylesHandler, 'css-loader'],
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: [stylesHandler, "css-loader", "sass-loader"],
+                use: [stylesHandler, 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-                type: "asset",
+                type: 'asset',
             },
 
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
     },
-};
+}
 
 module.exports = () => {
     if (isProduction) {
-        config.mode = "production";
+        config.mode = 'production'
     } else {
-        config.mode = "development";
+        config.mode = 'development'
     }
-    return config;
-};
+    return config
+}
