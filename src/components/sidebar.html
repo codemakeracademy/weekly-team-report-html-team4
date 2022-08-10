@@ -13,27 +13,45 @@
                 <li class="nav-item mb-3">
                     <a
                         href="index.html"
-                        class="nav-link active ps-3"
-                        aria-current="page"
+                        class="nav-link ps-3"
+                        aria-current="index.html"
                     >
                         Launch Guide
                     </a>
                 </li>
                 <li class="nav-item mb-3">
-                    <a href="invite_your_team.html" class="nav-link">
+                    <a
+                        href="invite_your_team.html"
+                        class="nav-link"
+                        aria-current="invite_your_team.html"
+                    >
                         Invite Your Team
                     </a>
                 </li>
                 <li class="nav-item mb-3">
-                    <a href="team_reports.html" class="nav-link">
+                    <a
+                        href="team_reports.html"
+                        class="nav-link"
+                        aria-current="team_reports.html"
+                    >
                         Team Reports
                     </a>
                 </li>
                 <li class="nav-item mb-3">
-                    <a href="my_reports.html" class="nav-link"> My Reports </a>
+                    <a
+                        href="my_reports.html"
+                        class="nav-link"
+                        aria-current="my_reports.html"
+                    >
+                        My Reports
+                    </a>
                 </li>
                 <li class="nav-item mb-3">
-                    <a href="fill_out_a_report.html" class="nav-link">
+                    <a
+                        href="fill_out_a_report.html"
+                        class="nav-link"
+                        aria-current="fill_out_a_report.html"
+                    >
                         Fill out a Report
                     </a>
                 </li>
@@ -47,12 +65,19 @@
                 </a>
             </li>
             <li class="nav-item mb-4">
-                <a href="my_company.html" class="nav-link"> My Company </a>
+                <a
+                    href="my_company.html"
+                    class="nav-link"
+                    aria-current="my_company.html"
+                >
+                    My Company
+                </a>
             </li>
             <li class="nav-item mb-1">
                 <a
                     href="edit_profile.html"
                     class="nav-link d-flex align-items-center"
+                    aria-current="edit_profile.html"
                 >
                     <div>
                         <img
@@ -77,3 +102,12 @@
         </ul>
     </aside>
 </div>
+<script>
+    const page = window.location.href.split('/').pop()
+
+    Array.from(document.getElementsByClassName('nav-link')).forEach((l) => {
+        if (l.ariaCurrent == page) {
+            l.classList.add('active')
+        }
+    })
+</script>
