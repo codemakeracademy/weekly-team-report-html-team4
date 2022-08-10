@@ -106,3 +106,7 @@ body {
         content: none !important;
     }
 }
+
+.modal-content {
+    border-top: $modal-content-border-top-width solid $yellow !important;
+}

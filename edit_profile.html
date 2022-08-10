@@ -87,11 +87,15 @@
                     <button class="btn btn-dark mt-1 fw-bold">
                         Alexandr Vovchuk
                     </button>
-                    <form action="team_members.html" method="get">
-                        <button class="btn btn-outline-dark mt-3 fw-bold">
+                    <div>
+                        <button
+                            class="btn btn-outline-dark mt-3 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalEditLeaders"
+                        >
                             Edit Leader(s)
                         </button>
-                    </form>
+                    </div>
                 </div>
                 <div class="fw-bold pt-5">
                     THE FOLLOWING TEAM MEMBERS REPORT TO ANATOLIY:
@@ -119,11 +123,15 @@
                     <button class="btn btn-dark mt-1 fw-bold">
                         Alexandr Vovchuk
                     </button>
-                    <form action="team_members.html" method="get">
-                        <button class="btn btn-outline-dark mt-3 fw-bold">
+                    <div>
+                        <button
+                            class="btn btn-outline-dark mt-3 fw-bold"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalEditMembers"
+                        >
                             Edit Member(s)
                         </button>
-                    </form>
+                    </div>
                 </div>
                 <div class="fw-bold pt-5">
                     ANATOLIY'S INVITE LINK:
@@ -167,5 +175,376 @@
             </div>
             <%=require('html-loader!./src/components/fixed_btns.html').default%>
         </div>
+        <div
+            class="modal fade"
+            id="modalEditMembers"
+            tabindex="-1"
+            aria-labelledby="modalEditMembersLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header pb-0">
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <h3 class="modal-title fw-bold mb-2">
+                                Edit Member(s).
+                            </h3>
+                            <div class="mb-5">
+                                <p>
+                                    By default, the person who sent you the
+                                    invite will recieve your weekly report. You
+                                    may also select the person you report to
+                                    directly as an additional leader.
+                                </p>
+                            </div>
+                            <div class="mb-5">
+                                <p>
+                                    Pro Tip: You can change who sees your report
+                                    in your profile settings.
+                                </p>
+                            </div>
+                            <div
+                                class="d-flex flex-wrap gap-2 mb-3"
+                                id="members"
+                            >
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex"
+                                    onclick="hide(this)"
+                                    id="Aleksandr Evseev"
+                                >
+                                    <div class="me-2">Aleksandr Evseev</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Nikolai Kapustin"
+                                >
+                                    <div class="me-2">Nikolai Kapustin</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Anna Kotova"
+                                >
+                                    <div class="me-2">Anna Kotova</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Nina Mammadova"
+                                >
+                                    <div class="me-2">Nina Mammadova</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Natalia Starkova"
+                                >
+                                    <div class="me-2">Natalia Starkova</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Anton Tarkhanov"
+                                >
+                                    <div class="me-2">Anton Tarkhanov</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex"
+                                    onclick="hide(this)"
+                                    id="Alexandr Vovchuk"
+                                >
+                                    <div class="me-2">Alexandr Vovchuk</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                            </div>
+                            <input
+                                class="form-control mb-4"
+                                list="membersDatalistOptions"
+                                id="membersDataList"
+                                onkeyup="checkMembersInput(event)"
+                                onkeydown="checkMembersInput(event)"
+                            />
+                            <datalist id="membersDatalistOptions">
+                                <option value="Aleksandr Evseev"></option>
+                                <option value="Nikolai Kapustin"></option>
+                                <option value="Anna Kotova"></option>
+                                <option value="Nina Mammadova"></option>
+                                <option value="Natalia Starkova"></option>
+                                <option value="Anton Tarkhanov"></option>
+                                <option value="Alexandr Vovchuk"></option>
+                            </datalist>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-start pt-0">
+                        <button
+                            type="button"
+                            class="btn btn-warning fw-bold"
+                            type="submit"
+                        >
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="modalEditLeaders"
+            tabindex="-1"
+            aria-labelledby="modalEditLeadersLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content shadow-lg">
+                    <div class="modal-header pb-0">
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <h3 class="modal-title fw-bold mb-2">
+                                Edit Leader(s).
+                            </h3>
+                            <div class="mb-4">
+                                <p>
+                                    By default, the person who sent you the
+                                    invite will recieve your weekly report. You
+                                    may also select the person you report to
+                                    directly as an additional leader.
+                                </p>
+                            </div>
+                            <div class="mb-4">
+                                <p>
+                                    Pro Tip: You can change who sees your report
+                                    in your profile settings.
+                                </p>
+                            </div>
+                            <div
+                                class="d-flex flex-wrap gap-2 mb-3"
+                                id="leaders"
+                            >
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex d-none"
+                                    onclick="hide(this)"
+                                    id="Aleksandr Evseev"
+                                >
+                                    <div class="me-2">Aleksandr Evseev</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1 d-none"
+                                    onclick="hide(this)"
+                                    id="Nikolai Kapustin"
+                                >
+                                    <div class="me-2">Nikolai Kapustin</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Anna Kotova"
+                                >
+                                    <div class="me-2">Anna Kotova</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Nina Mammadova"
+                                >
+                                    <div class="me-2">Nina Mammadova</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Natalia Starkova"
+                                >
+                                    <div class="me-2">Natalia Starkova</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex me-1"
+                                    onclick="hide(this)"
+                                    id="Anton Tarkhanov"
+                                >
+                                    <div class="me-2">Anton Tarkhanov</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary text-white d-flex"
+                                    onclick="hide(this)"
+                                    id="Alexandr Vovchuk"
+                                >
+                                    <div class="me-2">Alexandr Vovchuk</div>
+                                    <div>
+                                        <i
+                                            class="bi bi-x-lg text-light-gray"
+                                        ></i>
+                                    </div>
+                                </button>
+                            </div>
+                            <input
+                                class="form-control"
+                                list="leadersDatalistOptions"
+                                id="leadersDataList"
+                                onkeyup="checkLeadersInput(event)"
+                                onkeydown="checkLeadersInput(event)"
+                            />
+                            <datalist id="leadersDatalistOptions">
+                                <option value="Aleksandr Evseev"></option>
+                                <option value="Nikolai Kapustin"></option>
+                                <option value="Anna Kotova"></option>
+                                <option value="Nina Mammadova"></option>
+                                <option value="Natalia Starkova"></option>
+                                <option value="Anton Tarkhanov"></option>
+                                <option value="Alexandr Vovchuk"></option>
+                            </datalist>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-start pt-0">
+                        <button
+                            type="button"
+                            type="submit"
+                            class="btn btn-warning fw-bold"
+                        >
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
+<script>
+    function hide(e) {
+        e.classList.add('d-none')
+    }
+
+    function checkLeadersInput(e) {
+        const input = e.target
+        const datalistLeaders = document.getElementById(
+            'leadersDatalistOptions'
+        )
+        let options = []
+        Array.from(datalistLeaders.children).forEach((option) =>
+            options.push(option.value)
+        )
+        if (options.includes(input.value)) {
+            const leadersContainer = document.getElementById('leaders')
+
+            Array.from(leadersContainer.children).forEach((b) => {
+                if (b.id == input.value) {
+                    b.classList.remove('d-none')
+                    input.value = ''
+                }
+            })
+        }
+    }
+
+    function checkMembersInput(e) {
+        const input = e.target
+        const datalistMembers = document.getElementById(
+            'membersDatalistOptions'
+        )
+        let options = []
+        Array.from(datalistMembers.children).forEach((option) =>
+            options.push(option.value)
+        )
+        if (options.includes(input.value)) {
+            const membersContainer = document.getElementById('members')
+
+            Array.from(membersContainer.children).forEach((b) => {
+                if (b.id == input.value) {
+                    b.classList.remove('d-none')
+                    input.value = ''
+                }
+            })
+        }
+    }
+</script>
