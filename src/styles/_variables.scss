@@ -334,14 +334,14 @@ $light: $white;
 
 // // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
 );
 // // scss-docs-end theme-colors-map
 
@@ -742,12 +742,12 @@ $component-active-bg: $yellow;
 $input-btn-focus-width: 0.15rem;
 $input-btn-focus-color-opacity: 1;
 $input-btn-focus-color: rgba(
-  $component-active-bg,
-  $input-btn-focus-color-opacity
+    $component-active-bg,
+    $input-btn-focus-color-opacity
 );
 $input-btn-focus-blur: 0.5;
 $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
-  $input-btn-focus-color;
+    $input-btn-focus-color;
 
 // $input-btn-padding-y-sm:      .25rem !default;
 // $input-btn-padding-x-sm:      .5rem !default;
@@ -973,7 +973,7 @@ $input-focus-box-shadow: $input-btn-focus-box-shadow;
 $form-select-focus-border-color: $input-focus-border-color;
 $form-select-focus-width: $input-focus-width;
 $form-select-focus-box-shadow: 0 0 0 $form-select-focus-width
-  $input-btn-focus-color;
+    $input-btn-focus-color;
 
 // $form-select-padding-y-sm:        $input-padding-y-sm !default;
 // $form-select-padding-x-sm:        $input-padding-x-sm !default;

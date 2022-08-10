@@ -1,19 +1,19 @@
 .header {
-  background-image: url("../images/header.png");
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0px 30px;
-  box-shadow: 0px 4px 5px 0px rgba(34, 60, 80, 0.4);
-  min-height: 16rem;
-  .logo {
-    height: 15vh;
-    min-height: 100px;
-    width: auto;
-  }
-  h2 {
-    font-weight: 500;
-  }
+    background-image: url("../images/header.png");
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px 30px;
+    box-shadow: 0px 4px 5px 0px rgba(34, 60, 80, 0.4);
+    min-height: 16rem;
+    .logo {
+        height: 15vh;
+        min-height: 100px;
+        width: auto;
+    }
+    h2 {
+        font-weight: 500;
+    }
 }

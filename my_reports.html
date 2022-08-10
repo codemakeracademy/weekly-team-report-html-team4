@@ -1,544 +1,723 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>My Reports - Alpha</title>
-  </head>
-  <body class="h-100 d-flex">
-    <%=require('html-loader!./src/components/sidebar.html').default%>
-    <div class="content w-100 d-flex flex-column">
-      <div class="header">
-        <div class="profile-icon">
-          <h2>TM</h2>
-        </div>
-        <h1 class="fw-bold">Team Member</h1>
-        <p>team-member@ankosoftware.com</p>
-      </div>
-      <div class="container pt-5 d-flex flex-column mb-5">
-        <h5 class="w-100 text-center text-uppercase fw-bold mt-5">
-          Past Weekly Reports
-        </h5>
-        <div class="w-100 d-flex justify-content-center mt-3 mb-5">
-          <div class="underline"></div>
-        </div>
-        <div class="w-100 d-flex justify-content-end">
-          <button
-            class="btn btn-sm btn-secondary"
-            data-bs-toggle="collapse"
-            data-bs-target=".accordion-collapse"
-          >
-            Expand all
-          </button>
-        </div>
-        <div class="row w-100 report-header mx-auto my-2 shadow-sm">
-          <div class="col-8"></div>
-          <div class="col text-center">Morale</div>
-          <div class="col text-center">Stress</div>
-          <div class="col text-center">Workload</div>
-          <div class="col"></div>
-          <div style="width: 20px"></div>
-        </div>
-        <div class="accordion shadow-sm mb-2" id="accordion1">
-          <div class="accordion-item">
-            <h2 class="accordion-header position-relative" id="heading1">
-              <button
-                class="w-100 accordion-button row mx-auto collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse1"
-              >
-                <div class="col-8">May 3 - May 9, 2022</div>
-                <div class="col d-flex justify-content-center">
-                  <img
-                    src="<%=require('./src/images/very-happy.svg')%>"
-                    alt=""
-                  />
+    <head>
+        <meta charset="utf-8" />
+        <title>My Reports - Alpha</title>
+    </head>
+    <body class="h-100 d-flex">
+        <%=require('html-loader!./src/components/sidebar.html').default%>
+        <div class="content w-100 d-flex flex-column">
+            <div class="header">
+                <div class="profile-icon">
+                    <h2>TM</h2>
                 </div>
-                <div class="col d-flex justify-content-center">
-                  <img
-                    src="<%=require('./src/images/very-happy.svg')%>"
-                    alt=""
-                  />
-                </div>
-                <div class="col d-flex justify-content-center">
-                  <img
-                    src="<%=require('./src/images/very-happy.svg')%>"
-                    alt=""
-                  />
-                </div>
-                <div class="col">
-                  <div
-                    id="collapse1"
-                    class="text-dark text-end fs-5 accordion-collapse collapse show"
-                  >
-                    Expand
-                  </div>
-                  <div
-                    id="collapse1"
-                    class="text-light-gray text-end fs-5 accordion-collapse collapse"
-                  >
-                    Collapse
-                  </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapse1" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-very-happy rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/very-happy.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Morale</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about morale.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-very-happy rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/very-happy.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Stress</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about stress.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-very-happy rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/very-happy.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Workload</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about workload.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly High</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly Low</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Anything Else</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-              </div>
+                <h1 class="fw-bold">Team Member</h1>
+                <p>team-member@ankosoftware.com</p>
             </div>
-          </div>
-        </div>
-        <div class="accordion shadow-sm mb-2" id="accordion2">
-          <div class="accordion-item">
-            <h2 class="accordion-header position-relative" id="heading2">
-              <button
-                class="w-100 accordion-button row mx-auto collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse2"
-              >
-                <div class="col-8">April 12 - April 18, 2022</div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/happy.svg')%>" alt="" />
+            <div class="container pt-5 d-flex flex-column mb-5">
+                <h5 class="w-100 text-center text-uppercase fw-bold mt-5">
+                    Past Weekly Reports
+                </h5>
+                <div class="w-100 d-flex justify-content-center mt-3 mb-5">
+                    <div class="underline"></div>
                 </div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/happy.svg')%>" alt="" />
+                <div class="w-100 d-flex justify-content-end">
+                    <button
+                        class="btn btn-sm btn-secondary"
+                        data-bs-toggle="collapse"
+                        data-bs-target=".accordion-collapse"
+                    >
+                        Expand all
+                    </button>
                 </div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/happy.svg')%>" alt="" />
+                <div class="row w-100 report-header mx-auto my-2 shadow-sm">
+                    <div class="col-8"></div>
+                    <div class="col text-center">Morale</div>
+                    <div class="col text-center">Stress</div>
+                    <div class="col text-center">Workload</div>
+                    <div class="col"></div>
+                    <div style="width: 20px"></div>
                 </div>
-                <div class="col">
-                  <div
-                    id="collapse2"
-                    class="text-dark text-end fs-5 accordion-collapse collapse show"
-                  >
-                    Expand
-                  </div>
-                  <div
-                    id="collapse2"
-                    class="text-light-gray text-end fs-5 accordion-collapse collapse"
-                  >
-                    Collapse
-                  </div>
+                <div class="accordion shadow-sm mb-2" id="accordion1">
+                    <div class="accordion-item">
+                        <h2
+                            class="accordion-header position-relative"
+                            id="heading1"
+                        >
+                            <button
+                                class="w-100 accordion-button row mx-auto collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse1"
+                            >
+                                <div class="col-8">May 3 - May 9, 2022</div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/very-happy.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/very-happy.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/very-happy.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col">
+                                    <div
+                                        id="collapse1"
+                                        class="text-dark text-end fs-5 accordion-collapse collapse show"
+                                    >
+                                        Expand
+                                    </div>
+                                    <div
+                                        id="collapse1"
+                                        class="text-light-gray text-end fs-5 accordion-collapse collapse"
+                                    >
+                                        Collapse
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-very-happy rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/very-happy.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Morale
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about morale.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-very-happy rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/very-happy.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Stress
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about stress.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-very-happy rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/very-happy.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Workload
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about workload.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly High</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly Low</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Anything Else</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </button>
-            </h2>
-            <div id="collapse2" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-happy rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/happy.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Morale</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about morale.
-                  </div>
+                <div class="accordion shadow-sm mb-2" id="accordion2">
+                    <div class="accordion-item">
+                        <h2
+                            class="accordion-header position-relative"
+                            id="heading2"
+                        >
+                            <button
+                                class="w-100 accordion-button row mx-auto collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse2"
+                            >
+                                <div class="col-8">
+                                    April 12 - April 18, 2022
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/happy.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/happy.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/happy.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col">
+                                    <div
+                                        id="collapse2"
+                                        class="text-dark text-end fs-5 accordion-collapse collapse show"
+                                    >
+                                        Expand
+                                    </div>
+                                    <div
+                                        id="collapse2"
+                                        class="text-light-gray text-end fs-5 accordion-collapse collapse"
+                                    >
+                                        Collapse
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-happy rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/happy.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Morale
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about morale.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-happy rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/happy.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Stress
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about stress.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-happy rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/happy.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Workload
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about workload.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly High</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly Low</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Anything Else</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-happy rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/happy.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Stress</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about stress.
-                  </div>
+                <div class="accordion shadow-sm mb-2" id="accordion3">
+                    <div class="accordion-item">
+                        <h2
+                            class="accordion-header position-relative"
+                            id="heading3"
+                        >
+                            <button
+                                class="w-100 accordion-button row mx-auto collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse3"
+                            >
+                                <div class="col-8">
+                                    February 16 - February 22, 2022
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/neutral.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/neutral.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/neutral.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col">
+                                    <div
+                                        id="collapse3"
+                                        class="text-dark text-end fs-5 accordion-collapse collapse show"
+                                    >
+                                        Expand
+                                    </div>
+                                    <div
+                                        id="collapse3"
+                                        class="text-light-gray text-end fs-5 accordion-collapse collapse"
+                                    >
+                                        Collapse
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-neutral rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/neutral.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Morale
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about morale.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-neutral rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/neutral.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Stress
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about stress.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-neutral rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/neutral.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Workload
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about workload.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly High</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly Low</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Anything Else</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-happy rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/happy.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Workload</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about workload.
-                  </div>
+                <div class="accordion shadow-sm mb-2" id="accordion4">
+                    <div class="accordion-item">
+                        <h2
+                            class="accordion-header position-relative"
+                            id="heading4"
+                        >
+                            <button
+                                class="w-100 accordion-button row mx-auto collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse4"
+                            >
+                                <div class="col-8">
+                                    February 9 - February 15, 2022
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/sad.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/sad.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/sad.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col">
+                                    <div
+                                        id="collapse4"
+                                        class="text-dark text-end fs-5 accordion-collapse collapse show"
+                                    >
+                                        Expand
+                                    </div>
+                                    <div
+                                        id="collapse4"
+                                        class="text-light-gray text-end fs-5 accordion-collapse collapse"
+                                    >
+                                        Collapse
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-sad rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/sad.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Morale
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about morale.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-sad rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/sad.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Stress
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about stress.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-sad rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/sad.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Workload
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about workload.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly High</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly Low</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Anything Else</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly High</h4>
-                  <p class="m-0">There no comments added about workload.</p>
+                <div class="accordion shadow-sm mb-2" id="accordion5">
+                    <div class="accordion-item">
+                        <h2
+                            class="accordion-header position-relative"
+                            id="heading5"
+                        >
+                            <button
+                                class="w-100 accordion-button row mx-auto collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse5"
+                            >
+                                <div class="col-8">
+                                    January 19 - January 25, 2022
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/very-sad.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/very-sad.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col d-flex justify-content-center">
+                                    <img
+                                        src="<%=require('./src/images/very-sad.svg')%>"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col">
+                                    <div
+                                        id="collapse5"
+                                        class="text-dark text-end fs-5 accordion-collapse collapse show"
+                                    >
+                                        Expand
+                                    </div>
+                                    <div
+                                        id="collapse5"
+                                        class="text-light-gray text-end fs-5 accordion-collapse collapse"
+                                    >
+                                        Collapse
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-very-sad rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/very-sad.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Morale
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about morale.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-very-sad rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/very-sad.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Stress
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about stress.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <div
+                                        class="col-3 px-3 py-1 shadow bg-face-very-sad rounded d-flex align-items-center"
+                                    >
+                                        <img
+                                            class="mx-2 me-4 my-2"
+                                            src="<%=require('./src/images/very-sad.svg')%>"
+                                            alt=""
+                                        />
+                                        <div
+                                            class="text-white text-uppercase fs-3"
+                                        >
+                                            Workload
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-9 ps-4 fst-italic fs-6 text-light-gray"
+                                    >
+                                        There no comments added about workload.
+                                    </div>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly High</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Weekly Low</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                                <div class="row my-4 mx-4">
+                                    <h4>Anything Else</h4>
+                                    <p class="m-0">
+                                        There no comments added about workload.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly Low</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Anything Else</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-        <div class="accordion shadow-sm mb-2" id="accordion3">
-          <div class="accordion-item">
-            <h2 class="accordion-header position-relative" id="heading3">
-              <button
-                class="w-100 accordion-button row mx-auto collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse3"
-              >
-                <div class="col-8">February 16 - February 22, 2022</div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/neutral.svg')%>" alt="" />
-                </div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/neutral.svg')%>" alt="" />
-                </div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/neutral.svg')%>" alt="" />
-                </div>
-                <div class="col">
-                  <div
-                    id="collapse3"
-                    class="text-dark text-end fs-5 accordion-collapse collapse show"
-                  >
-                    Expand
-                  </div>
-                  <div
-                    id="collapse3"
-                    class="text-light-gray text-end fs-5 accordion-collapse collapse"
-                  >
-                    Collapse
-                  </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapse3" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-neutral rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/neutral.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Morale</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about morale.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-neutral rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/neutral.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Stress</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about stress.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-neutral rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/neutral.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Workload</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about workload.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly High</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly Low</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Anything Else</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion shadow-sm mb-2" id="accordion4">
-          <div class="accordion-item">
-            <h2 class="accordion-header position-relative" id="heading4">
-              <button
-                class="w-100 accordion-button row mx-auto collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse4"
-              >
-                <div class="col-8">February 9 - February 15, 2022</div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/sad.svg')%>" alt="" />
-                </div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/sad.svg')%>" alt="" />
-                </div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/sad.svg')%>" alt="" />
-                </div>
-                <div class="col">
-                  <div
-                    id="collapse4"
-                    class="text-dark text-end fs-5 accordion-collapse collapse show"
-                  >
-                    Expand
-                  </div>
-                  <div
-                    id="collapse4"
-                    class="text-light-gray text-end fs-5 accordion-collapse collapse"
-                  >
-                    Collapse
-                  </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapse4" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-sad rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/sad.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Morale</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about morale.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-sad rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/sad.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Stress</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about stress.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-sad rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/sad.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Workload</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about workload.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly High</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly Low</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Anything Else</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion shadow-sm mb-2" id="accordion5">
-          <div class="accordion-item">
-            <h2 class="accordion-header position-relative" id="heading5">
-              <button
-                class="w-100 accordion-button row mx-auto collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse5"
-              >
-                <div class="col-8">January 19 - January 25, 2022</div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/very-sad.svg')%>" alt="" />
-                </div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/very-sad.svg')%>" alt="" />
-                </div>
-                <div class="col d-flex justify-content-center">
-                  <img src="<%=require('./src/images/very-sad.svg')%>" alt="" />
-                </div>
-                <div class="col">
-                  <div
-                    id="collapse5"
-                    class="text-dark text-end fs-5 accordion-collapse collapse show"
-                  >
-                    Expand
-                  </div>
-                  <div
-                    id="collapse5"
-                    class="text-light-gray text-end fs-5 accordion-collapse collapse"
-                  >
-                    Collapse
-                  </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapse5" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-very-sad rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/very-sad.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Morale</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about morale.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-very-sad rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/very-sad.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Stress</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about stress.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <div
-                    class="col-3 px-3 py-1 shadow bg-face-very-sad rounded d-flex align-items-center"
-                  >
-                    <img
-                      class="mx-2 me-4 my-2"
-                      src="<%=require('./src/images/very-sad.svg')%>"
-                      alt=""
-                    />
-                    <div class="text-white text-uppercase fs-3">Workload</div>
-                  </div>
-                  <div class="col-9 ps-4 fst-italic fs-6 text-light-gray">
-                    There no comments added about workload.
-                  </div>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly High</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Weekly Low</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-                <div class="row my-4 mx-4">
-                  <h4>Anything Else</h4>
-                  <p class="m-0">There no comments added about workload.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <%=require('html-loader!./src/components/fixed_btns.html').default%>
-  </body>
+        <%=require('html-loader!./src/components/fixed_btns.html').default%>
+    </body>
 </html>
