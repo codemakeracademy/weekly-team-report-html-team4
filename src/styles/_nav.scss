@@ -1,0 +1,22 @@
+@import './variables';
+
+.nav-pills {
+    .nav-link {
+        text-align: start;
+        &:hover {
+            color: $yellow;
+        }
+        a {
+            &:visited {
+                color: white;
+            }
+        }
+    }
+
+    .nav-link.active {
+        font-weight: $nav-pills-link-active-font-weight;
+        &:hover {
+            color: $yellow;
+        }
+    }
+}

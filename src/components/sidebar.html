@@ -1,0 +1,118 @@
+<div class="sidebar-container w-100">
+    <aside
+        class="sidebar d-flex flex-column justify-content-between flex-shrink-0 p-3"
+    >
+        <div class="h-100">
+            <img
+                class="w-100 mb-3"
+                src="../images/logos/logo_transparent.png"
+                alt="Dream Team"
+            />
+
+            <ul class="nav nav-pills flex-column mb-auto h-100">
+                <li class="nav-item mb-3">
+                    <a
+                        href="index.html"
+                        class="nav-link ps-3"
+                        aria-current="index.html"
+                    >
+                        Launch Guide
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a
+                        href="invite_your_team.html"
+                        class="nav-link"
+                        aria-current="invite_your_team.html"
+                    >
+                        Invite Your Team
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a
+                        href="team_reports.html"
+                        class="nav-link"
+                        aria-current="team_reports.html"
+                    >
+                        Team Reports
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a
+                        href="my_reports.html"
+                        class="nav-link"
+                        aria-current="my_reports.html"
+                    >
+                        My Reports
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a
+                        href="fill_out_a_report.html"
+                        class="nav-link"
+                        aria-current="fill_out_a_report.html"
+                    >
+                        Fill out a Report
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item mb-4">
+                <a href="#elite" class="nav-link" aria-current="page">
+                    Back to Elite
+                </a>
+            </li>
+            <li class="nav-item mb-4">
+                <a
+                    href="my_company.html"
+                    class="nav-link"
+                    aria-current="my_company.html"
+                >
+                    My Company
+                </a>
+            </li>
+            <li class="nav-item mb-1">
+                <a
+                    href="edit_profile.html"
+                    class="nav-link d-flex align-items-center"
+                    aria-current="edit_profile.html"
+                >
+                    <div>
+                        <img
+                            src="../images/gear-fill.svg"
+                            style="width: auto; height: 100%"
+                        />
+                    </div>
+                    <div class="ms-2">My Profile</div>
+                </a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="#" class="nav-link d-flex align-items-center">
+                    <div>
+                        <img
+                            src="../images/box-arrow-left.svg"
+                            style="width: auto; height: 100%"
+                        />
+                    </div>
+                    <div class="ms-2">Sign Out</div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+</div>
+<script>
+    let page = window.location.href.split('/').pop()
+
+    if (page == '') {
+        page = 'index.html'
+    } else if (page == 'extended_team_reports.html') {
+        page = 'team_reports.html'
+    }
+    Array.from(document.getElementsByClassName('nav-link')).forEach((l) => {
+        if (l.ariaCurrent == page) {
+            l.classList.add('active')
+        }
+    })
+</script>
